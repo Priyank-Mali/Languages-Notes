@@ -1,6 +1,16 @@
 # include<stdio.h>
+# include<stdbool.h>
 
 int main(){
+
+    /*
+    int
+    float
+    double 
+    char
+    const pi = 3.14;
+    bool
+    */
 
     // int mynum = 5;
 
@@ -31,11 +41,14 @@ int main(){
     */
 
     // char mytext1 = 'Hello, World';
-    // printf("\n%c",mytext1);
+    // printf("\n%c",mytext1); // error
 
     // strings 
     char mytext2[] = "Hello, World";
     printf("\n%s",mytext2);
+
+    bool isProgrammingfun = true;
+    printf("\n%d",isProgrammingfun);
 
 
     /*
