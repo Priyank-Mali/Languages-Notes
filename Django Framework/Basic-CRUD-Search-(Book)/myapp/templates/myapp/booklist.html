@@ -1,0 +1,128 @@
+{% extends "myapp/layout.html" %}
+
+{% block title %}
+Lists
+{% endblock %}
+
+{% block style %}
+h2{
+    text-align : center;
+    font-family : serif;
+}
+{% endblock %}
+
+{% block content %}
+
+<h2>BOOK LIST</h2>
+
+     {% comment %} 
+     here 2 method to add Books:
+     1.) manual HTML form
+     2.) django form
+     {% endcomment %}
+
+<form class="d-flex align-items-center">
+    <button type="button"  data-bs-toggle="modal" data-bs-target="#bookadd" class="btn btn-outline-success me-2" type="submit" style="width:200px;">ADD BOOKS</button>
+    <input class="form-control me-2" name="search" type="search" placeholder="Search by title" aria-label="Search">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+</form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="bookadd" tabindex="-1" aria-labelledby="bookaddLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="bookaddLabel">Book Add</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="{% url "addbookview" %}" method='POST'>
+                {% csrf_token %}
+                {{form.as_p}}
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">CLOSE</button>
+                    <button type="submit" class="btn btn-primary">ADD</button>
+                </div>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<table class="table table-bordered border-dark mt-3">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>AUTOR</th>
+        <th>ACTION</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+            <tr>
+                <td>{{forloop.counter}}</td>
+                <td>{{book.title}}</td>
+                <td>{{book.autor}}</td>
+                <td>
+
+                    <!-- edit button -->
+                    <a href="" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#editbookdetails{{book.id}}">Edit</a>
+
+                    <!-- Modal for edit book -->
+                    <div class="modal fade" id="editbookdetails{{book.id}}" tabindex="-1" aria-labelledby="editbookdetails{{book.id}}Label" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="editbookdetails{{book.id}}Label">Edit Book</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <class="modal-body">
+                            <form action="{% url "updatebook" pk=book.id %}" method='POST' class="card p-3">
+                              {% csrf_token %}
+                              <div class="mb-3">
+                                <label for="title" class="form-label">Book Title</label>
+                                <input type="text" name="title" value="{{book.title}}">
+                                <br>
+                                <label for="author" class="form-label">Book Author</label>
+                                <input type="text" name="author" value="{{book.autor}}">
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancle</button>
+                                  <button type="submit" class="btn btn-success">Save Changes</button>
+                                </div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- delete button -->
+                    <a href="" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deletebook{{book.id}}">Delete</a>
+
+                    <!-- Modal for delete book -->
+                    <div class="modal fade" id="deletebook{{book.id}}" tabindex="-1" aria-labelledby="deletebook{{book.id}}Label" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="deletebook{{book.id}}Label">Are You Sure To Delete This Book?</h5>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="modal-footer">
+                                <form action="{% url "deletebook" pk=book.id %}" method='POST'>
+                                  {% csrf_token %}
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">NO</button>
+                                  <button type="submit" class="btn btn-success">YES</button>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </td>
+            </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
