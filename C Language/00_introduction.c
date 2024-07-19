@@ -23,7 +23,8 @@ int main(){
 }
 
 /*
-Line 1: #include <stdio.h> is a header file library that lets us work with input and output functions, such as printf() (used in line 18). Header files add functionality to C programs.
+Line 1: #include <stdio.h> -->  header file library 
+    that lets us work with input and output functions, such as printf() (used in line 18). Header files add functionality to C programs.
 
 Line 2: A blank line. C ignores white space. But we use it to make the code more readable.
 

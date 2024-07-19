@@ -1,13 +1,18 @@
-// The while loop loops through a block of code as long as a specified condition is true:
+// while(condition)
 
+// if (condition) is true ,statement inside the body of while loop executed.
+
+// The process goes on until (condition) is evaluated to false.
+// If (condition) is false, the loop terminates (ends).
 
 # include<stdio.h>
 
 int main(){
-    int i = 0;
+    
+    int i = 1;
 
-    while (i<5){
-        printf("%d\n",i);
+    while(i<=10){
+        printf("%d ",i);
         i++;
-    }    
+    }
 }
