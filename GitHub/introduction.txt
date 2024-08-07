@@ -5,6 +5,9 @@ Git:
     Imagine you are working on a project, and yo want to save different versions of your work so you can go back and see what changes you've made or revert to an earlier version if something goes wrong.
     Git allows you to do this by creating snapshots of your project at various points in time.
 
+    Git is the free and open source distributed version control system that's responsible for everything GitHub
+    related that happens locally on your computer
+
 GitHub:
     Github is a platform where you can store your Git repositories(files) online.
     It's like a social network for code where you can share your projects, collaborate with others, and keep a backup of your work.
@@ -23,3 +26,6 @@ git checkout
 git branch
 git merge
 git log
+
+
+https://www.atlassian.com/git/glossary#terminology
