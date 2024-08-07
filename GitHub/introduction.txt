@@ -1,0 +1,25 @@
+Git and GitHub
+
+Git:
+    Git is a version control system that helps you manage and keep track of changes to your code or any other files.
+    Imagine you are working on a project, and yo want to save different versions of your work so you can go back and see what changes you've made or revert to an earlier version if something goes wrong.
+    Git allows you to do this by creating snapshots of your project at various points in time.
+
+GitHub:
+    Github is a platform where you can store your Git repositories(files) online.
+    It's like a social network for code where you can share your projects, collaborate with others, and keep a backup of your work.
+    Github also provides tools for managing your projects, tracking issues, and reviewing code with teammates.
+
+
+Here's list of common Git Commands, 
+
+git clone
+git status
+git add
+git commit -m ""
+git push
+git pull
+git checkout
+git branch
+git merge
+git log
