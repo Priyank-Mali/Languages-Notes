@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image map audio video picture</title>
+</head>
+<body>
+    <!-- <audio src="files/Danza-Kuduro.mp3" controls></audio> -->
+     <audio controls>
+        <source src="files/audio.mp3" type="audio/mp3"> 
+     </audio>
+
+     <!-- <video src="files/video.mp4" controls></video> -->
+     <video controls poster="files/image.jpg">
+        <source src="files/video.mp4">
+     </video>
+
+     <!-- use to change images of different screen(for responsive) -->
+   <picture>
+      <source media="(max-width: 600px)" srcset="files/image2.jpg">
+      <source media="(max-width: 1000px)" srcset="files/image3.jpg">
+      <img src="files/image1.jpg" alt="" width="600px">
+   </picture>
+
+</body>
+</html>
