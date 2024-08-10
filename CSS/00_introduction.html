@@ -29,7 +29,7 @@
         selector {
             property1: value;
             property2: value;
-        }
+        }   
     </pre>
     <ul>
         <caption>The basic syntax of CSS includes 3 main parts:</caption>
@@ -39,6 +39,83 @@
         <li><mark>value</mark> - specifies the new value you want to assign to the property (color of the text to red, background to
             gray, and so on)</li>
     </ul>
+    <dl>
+        <caption>CSS Essential Concepts</caption>
+        <dt style="color: red; font-size: large; font-weight: 600;">Inheritance:</dt>
+        <dd>
+            In CSS, inheritance passes the styles directly from the parent element to its child elements.
+
+            The child elements normally take the same styles that have been assigned to the parent, unless they are provided their own styles.
+            
+            This mechanism ensures a consistent design across a webpage.
+        </dd>
+        <dt style="color: red; font-size: large; font-weight: 600;">Rule Order</dt>
+        <dd>
+            Rule order refers to the sequence in which CSS rules are applied to the HTML elements.
+
+            The order of CSS rules determine the priority for the styles. The later rules overrides the earlier ones and ensures that the most recent styles are applied.
+            <pre>
+                p {
+                    color: red;
+                }
+                
+                /* overrides color previous color value */
+                p {
+                    color: blue;
+                }
+            </pre>
+        </dd>
+        <dt style="color: red; font-size: large; font-weight: 600;">Style Rule Hierarchy</dt>
+        <dd>
+            The style rule hierarchy determines the priority of CSS rules when multiple rules target the same element.
+
+            In CSS, the following hierarchy of style priorities applies:
+
+            Inline styling: Styles applied directly within HTML element.
+            ID selectors: Styles elements with specific ID.
+            Class and attribute selectors: Styles elements with certain class or attribute.
+            Element selectors: Styles elements with specific tag name.
+            <pre>
+                /* id selector */
+                #unique {
+                    color: red;
+                }
+
+                /* class selector */
+                .paragraph {
+                    color: green;
+                }
+
+                /* element selector */
+                p {
+                    color: blue;
+                
+                output:
+                    red
+            </pre>
+        </dd>
+        <dt style="color: red; font-size: large; font-weight: 600;">Specificity</dt>
+        <dd>
+            Specificity in CSS determines which style rules take precedence when multiple rules target the same element.
+
+            This helps the browser prioritize and apply the most relevant styles.
+            <pre>
+                div p {
+                    color: blue;
+                }
+                
+                p {
+                    color: orange;
+                }
+                output:
+                    blue
+            </pre>
+        </dd>
+        <dt style="color: red; font-size: large; font-weight: 600;">Box Model</dt>
+        <dd>
+            The box model specifies that every element in HTML is represented as a rectangular box. It helps to understand how elements are structured and interact with each other on a webpage.
+        </dd>
+    </dl>
 
     <h3>&#129297;Why should you learn to use CSS? &#128187;</h3>
     <details>
@@ -70,6 +147,8 @@
             CSS provides tools to add animations and transitions to the webpage. Animations and Transitions can enhance the user experience of the webpage.
         </li>
     </details>
+
+
     
 </body>
 

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Stroke Shadow</title>
+    <style>
+        h1{
+            font-size: x-large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: blueviolet;
+            background-color: aqua;
+            user-select: text;
+
+            -webkit-text-stroke: 2px;
+            -webkit-text-stroke-width: 2px;
+            -webkit-text-stroke-color: black;
+        }
+        h2{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: black;
+            text-shadow: 0px 7px 5px red;;
+        }
+        div{
+            height: 200px;
+            width: 300px;
+            border: 1px solid black;
+            margin: 50px auto;
+            border-radius: 10px 50px 60px 100px;
+
+            outline: 5px groove orangered;
+
+            /* outline-width: 18px;
+            outline-style: dotted;
+            outline-color: green; */
+        }
+        .mydiv{
+            overflow: scroll;
+            text-wrap: ;
+            padding: 10px;
+            /* padding: 20px 30px 40px 50px; */
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Text Stroke Shadow Outline Overflow User Select
+    </h1>
+
+    <h2>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, necessitatibus.
+    </h2>
+    <div></div>
+
+    <div class="mydiv">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi vitae quam error ad placeat a qui labore id, sapiente voluptatum debitis laboriosam, in maiores itaque voluptatibus, quod aliquid provident iusto.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore animi reprehenderit aliquam eaque veritatis dolorum recusandae aspernatur corporis, minima ipsam eos magnam cum iste ducimus dolore vero ad odit culpa.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus deleniti numquam odio, ex quos vel omnis dolore possimus minima perferendis quo quisquam obcaecati adipisci, veniam inventore minus facere delectus architecto.
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes-Selector</title>
+    <style>
+        button{
+            width: 100px;
+            height: 50px;
+        }
+        button:hover{
+            color: white;
+            background-color: orangered;
+            border-radius: 10px 30px;
+        }
+        div p:first-child{
+            color: red;
+        }
+        div p:last-child{
+            color: blue;
+        }
+       
+    </style>
+</head>
+<body>
+    <button>Hover Me</button>
+
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, culpa?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, culpa?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, culpa?</p>
+    </div>
+
+</body>
+</html>
