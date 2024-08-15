@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background</title>
+    <style>
+        div{
+            width: 300px;
+            border: 6px dashed black;
+            background-color: cadetblue;
+            padding: 20px;
+
+            /* default - border-box */
+            background-clip: content-box;
+        }
+        h1{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            width: 700px;
+            color: transparent;
+
+            /* use to set background painting area */
+            background-image: linear-gradient(red,orange,green);
+            background-size: contain;
+            background-position: center;
+
+            background-clip: text;
+        }
+        .mydiv{
+            height: 250px;
+            width: 300px;
+            border: 1px solid black;
+            padding: 20px;
+
+            /* use to set image in background area also depends on position and size */
+            background-image: url(image1.png);
+            background-position: ;
+            background-size: ;
+
+            background-origin: ;
+        }
+        .mydiv2{
+            height: 300px;
+            width: 400px;
+            background: url();
+        }
+    </style>
+</head>
+<body>
+    <h1>Backgroung Clip / origin / blend mode</h1>
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor sint consequatur aliquid pariatur molestias dicta quia error praesentium, exercitationem enim. Quisquam harum libero qui repellendus sit velit eius, repudiandae minima!
+    </div>
+
+    <div class="mydiv"></div>
+
+    <div class="mydiv2"></div>
+</body>
+</html>

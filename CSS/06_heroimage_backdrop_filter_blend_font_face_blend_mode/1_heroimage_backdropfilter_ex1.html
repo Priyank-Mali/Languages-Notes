@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .heroimge {
+            /* position: relative; */
+        }
+
+        img {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            backdrop-filter: britness();
+        }
+
+        .text {
+            position: absolute;
+            top: 30%;
+            text-align: center;
+            /* background-image: linear-gradient(5deg, red, blue, yellow); */
+            backdrop-filter: blur(6px);
+            background-clip: text;
+            color: black;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: x-large;
+            /* color: blue; */
+            text-transform: capitalize;
+            padding: 10px;
+        }
+
+        p {
+            /* color: white; */
+            width: 50%;
+            margin: auto;
+            padding: 10px 0;
+        }
+
+        .btngrop {
+            
+        }
+        button{
+            padding: 10px;
+            border: none;
+            background-color: burlywood;   
+            margin: 10px; 
+        }
+        button:hover{
+            background-color: black;
+            color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heroimage">
+        <img src="https://c0.wallpaperflare.com/preview/324/740/911/closeup-communication-computer-connection.jpg"
+            alt="">
+        <div class="text">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dicta facilis quis eaque aut ut voluptates
+                quasi? Deleniti, aliquam nisi.
+            </p>
+            <div class="btngrop">
+                <button>Find Tutor</button>
+                <button>Read More</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

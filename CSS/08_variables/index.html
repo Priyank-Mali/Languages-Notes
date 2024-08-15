@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variable</title>
+    <style>
+        :root{
+
+        }
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .nav{
+            background-color: aqua;
+        }
+        .nav ul li{
+            list-style: none;
+            display: flex;
+        }
+        .content{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+    The var() function is used to insert the value of a CSS variable.
+
+    CSS variables have access to the DOM, which means that you can create variables with local or global scope, change the variables with JavaScript, and change the variables based on media queries.
+
+    A good way to use CSS variables is when it comes to the colors of your design. Instead of copy and paste the same colors over and over again, you can place them in variables.
+    -->
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="content">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque quibusdam vero beatae corrupti corporis. Reprehenderit sapiente accusamus quae quia nemo repellendus quo odit consequatur porro. Fugit tenetur accusantium unde voluptatem!
+        </p>
+    </div>
+</body>
+
+</html>

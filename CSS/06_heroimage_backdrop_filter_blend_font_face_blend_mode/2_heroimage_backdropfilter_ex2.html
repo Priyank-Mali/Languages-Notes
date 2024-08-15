@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        .heroimage{
+            background: url(https://c0.wallpaperflare.com/preview/324/740/911/closeup-communication-computer-connection.jpg) no-repeat;
+            background-size: cover;
+            padding: 230px;
+            /* filter: blur(10px);
+            -webkit-filter: blur(10px); */
+            position: relative;
+            z-index: 1;
+        }
+        /* create layer bet bgimage and text */
+        .heroimage::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgb(100,100,100,0.7);
+            z-index: -1;
+            
+        }
+        .text{
+            text-align: center;
+            /* backdrop-filter: ; */
+            backdrop-filter: blur(10px);
+        }
+        button{
+            padding: 10px;
+            background-color: aquamarine;
+            color: black;
+            border: 1px solid aquamarine;
+        }
+        .bt2:hover{
+            background-color: transparent;
+            color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="heroimage">
+        <div class="text">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi dicta facilis quis eaque aut ut voluptates
+                quasi? Deleniti, aliquam nisi.
+            </p>
+            <div class="btngrop">
+                <button>Find Tutor</button>
+                <button class="bt2">Read More</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

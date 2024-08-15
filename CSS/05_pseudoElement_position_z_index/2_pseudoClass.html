@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* pseudo class start with : sign */
+        /* .link1:link{
+            color: aqua;
+        } */
+         .link1:any-link{
+            color: red;
+         }
+         .link2:active{
+            color: yellow;
+         }
+         .link2:visited{
+            color: lightgreen;
+         }
+         .link3:hover{
+            color: cadetblue;
+         }
+         button{
+            padding: 10px;
+            border: 2px solid blue;
+            color: rgb(247, 240, 240);
+            background-color: blue;
+         }
+         button:hover{
+            background-color: transparent;
+            color: black;
+         }
+         button:focus{
+            box-shadow: 0 0 5px red;
+         }
+         input{
+            border: 1px solid black;
+         }
+         :focus-visible{
+            outline: none;
+         }
+         table{
+            border-collapse: collapse;
+         }
+         th,td{
+            padding: 10px;
+         }
+         
+        tr:nth-child(odd){
+            background-color: aquamarine;
+            color: red;
+        }
+        tr:nth-child(even){
+            background-color: blueviolet;
+        }
+        tr:first-child{
+           background-color: black;
+           color: white;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+        .box:nth-child(1){
+            background-color: aqua;
+        }
+        .box:nth-child(2){
+            background-color: rgb(69, 43, 236);
+        }
+        
+    </style>
+</head>
+<body>
+    <a href="#" class="link1">Click Here</a>
+    <a href="#" class="link2">Click Here</a>
+    <a href="#" class="link3">Click Here</a>
+    
+    <button>Click Me</button>
+
+    <input type="text" name="" id="">
+
+    <table border="1">
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Phone</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Lorem.</td>
+            <td>Lorem, ipsum.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Lorem.</td>
+            <td>Lorem, ipsum.</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Lorem.</td>
+            <td>Lorem, ipsum.</td>
+        </tr>
+    </table>
+    <div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

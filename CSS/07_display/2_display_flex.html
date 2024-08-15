@@ -1,0 +1,57 @@
+<!-- 
+ list of property which only effexted while appliying flex.
+
+flex-grow (child)
+flex-shrink (child)
+flex-basis (child)
+flex (child)
+flex-direction (parent) 
+flex-wrap (parent)
+flex-flow (parent)
+justify-content (parent)
+align-items (parent)
+align-self (child)
+align-content (parent)
+row-gap (parent)
+column-gap (parent)
+gap (parent)
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            border: 1px solid black;
+            display: flex;
+            /* row-gap: 10px; */
+            /* column-gap: 10px; */
+            gap: 10px;
+            /* flex-direction: row; */
+            justify-content: center;
+            
+        }
+
+        .child {
+            height: 200px;
+            width: 200px;
+            background-color: blanchedalmond;
+            font-size: 40px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child">1</div>
+        <div class="child">2</div>
+        <div class="child">3</div>
+        <div class="child">4</div>
+    </div>
+</body>
+
+</html>
