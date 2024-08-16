@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            display: flex;
+
+            /* use for set responsive */
+            /* flex-direction: row; */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+            /* flex-wrap: nowrap; */
+            /* flex-wrap: wrap-reverse ; */
+
+            /* flex-flow: column wrap-reverse; */
+
+            /* align-items: center; */
+            justify-content: center;
+
+            /* effected while appling flex-wrap:wrap | wrap-reverse */
+            /* align-content: center; */
+        }
+        .main div {
+            width: 50%;
+            height: 100px;
+            font-size: 40px;
+            border: 1px solid black;
+        }
+        .box1 {
+            background-color: aquamarine;
+        }
+
+        .box2 {
+            background-color: chocolate;
+        }
+
+        .box3 {
+            background-color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+
+grid used to show tabular type data.
+
+property list : 
+
+grid-template-columns (parent)
+grid-template-rows (parent)
+row-gap (parent)
+column-gap (parent)
+gap (parent)
+grid-area (child)
+grid-template-area  (parent)
+grid-row-start (child)
+grid-row-end (child)
+grid-row (child)
+grid-column-start (child)
+grid-column-end (child)
+grid-column (child)
+
+justify-content (parent)
+justify-items (parent)
+justify-self (child)
+
+align-items (parent)
+align-content (parent)
+align-self (child)
+
+place-content (parent)
+place-items (parent)
+place-self (child) 
+
+*/
+        .main {
+            display: grid;
+            grid-template-rows: ;
+            
+            /* grid-template-columns:auto auto auto auto auto ; */
+            /* grid-template-columns: 1fr 2fr 3fr 4fr 5fr ; */
+            grid-template-columns: repeat(5,1fr);
+
+            /* show effect in auto value */
+            /* justify-content: center; */
+
+            /* show effects in auto value */
+            justify-content: ;
+            /* row-gap: 10px; */
+            /* column-gap: 20px; */
+            gap: 10px;
+        }
+
+        .box {
+            height: 100px;
+            width: 100px;
+            background-color: chocolate;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+    </div>
+</body>
+
+</html>
