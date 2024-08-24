@@ -9,18 +9,27 @@
     <h1>Dashboard</h1>
     <h1>{{date}}</h1>
     <h1>
-        Name: {{name}}
+        Name: {{context["name"]}}
         <br>
-        Age : {{age}}
+        Age : {{context.age}}
         <br>
         Time : {{time}}
     </h1>
     <h1>
         {# THIS IS COMMENT #}
-        {% for i in range(1,11) %}
+        {% for i in range(1,5) %}
             {{i}}*{{i}}-->{{i*i}}
             <br>
         {% endfor %}
     </h1>
+
+    {% with my_var=100 %}
+        The Number is: <i>{{my_var}}</i>
+    {% endwith %}
+
+    <br>
+    {% set x=200 %}
+        The Number is <i>{{x}}</i>
+
 </body>
 </html>

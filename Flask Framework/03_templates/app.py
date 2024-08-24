@@ -7,13 +7,16 @@ app = Flask("__main__")
 
 @app.route("/")
 def deshboard():
-    context = {
-        "name" : "priyank mali",
-        "age" : 99,
-        "time" : datetime.now()
-    }
-    return render_template("dashboard.html",date=datetime.now())
+    # context = {
+    #     "name" : "priyank mali",
+    #     "age" : 99,
+    #     "time" : datetime.now()
+    # }
+    name = "priyank"
+    age = 99
+    return render_template("dashboard.html",context={"name" : name,"age" : age})
     # return render_template("dashboard.html",**context)
+    # return render_template("dashboard.html",date=datetime.now())
 
 @app.route("/about")
 def about():

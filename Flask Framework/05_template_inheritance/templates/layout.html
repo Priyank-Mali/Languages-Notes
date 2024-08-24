@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        {% block title %}{% endblock %}
+        {% block title %}{% endblock %}| FlaskApp
     </title>
     <style>
         *{
@@ -15,6 +15,9 @@
             text-decoration: none;
             padding: 30px;
             font-size: 20px;
+        }
+        a:hover{
+            color: rgb(38, 212, 11);
         }
         .contaniner{
             /* background-color: aquamarine; */
@@ -27,9 +30,14 @@
 <body>
     <div class="contaniner">
         <ul class="nav">
-            <a href="">Home</a>
-            <a href="">About</a>
-            <a href="">Contact</a>
+            <!--
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+            -->
+            <a href="{{ url_for("home") }}">Home</a>
+            <a href="{{ url_for("about") }}">About</a>
+            <a href="{{ url_for("contact") }}">Contact</a>
         </ul>
     </div>
     <div>
