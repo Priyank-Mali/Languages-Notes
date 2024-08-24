@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 500px;
+            width: 500px;
+            background-color: black;
+            border-radius: 10px;
+            display: flex;
+            /*  
+            justify-content property is specifically used with flexbox layouts in CSS. 
+            Without display: flex;, the justify-content property will have no effect.
+             */
+            justify-content: center;
+            gap: 10px;
+            /* column-gap: 10px; */
+            /* align-items: baseline; */
+            flex-wrap: wrap;
+            align-content: center;
+        }
+        .box{
+            /* margin: auto; */
+            top: 10px;
+            text-align: center;
+            height: 80px;
+            width: 80px;
+            background-color: orange;
+            border-radius: 10px;
+        }
+        .box1 h1{
+            /* font-size: 50px; */
+        }
+        .box1{
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1"><h1>1</h1></div>
+        <div class="box"><h1>2</h1></div>
+        <div class="box"><h1>3</h1></div>
+        <div class="box"><h1>4</h1></div>
+        <div class="box"><h1>5</h1></div>
+        <div class="box"><h1>6</h1></div>
+        <div class="box"><h1>7</h1></div>
+        <div class="box"><h1>8</h1></div>
+        
+    </div>
+</body>
+</html>
