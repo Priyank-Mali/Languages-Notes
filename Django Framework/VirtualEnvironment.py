@@ -31,7 +31,7 @@ steps:
 
 -> pip install virtualenv
 
--> python m venv <virtual-environment-name>
+-> python -m venv <virtual-environment-name>
     make sure:
         mkdir projectA
         cd projectA
