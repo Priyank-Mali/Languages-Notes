@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            padding: 30px;
+            font-size: 20px;
+        }
+        .contaniner{
+            /* background-color: aquamarine; */
+        }
+        .container .nav {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="contaniner">
+        <ul class="nav">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </ul>
+    </div>
+    <div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
