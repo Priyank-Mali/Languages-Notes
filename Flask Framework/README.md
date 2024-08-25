@@ -49,4 +49,19 @@
 7] How does a Flask routing work?
 
     --> App routing is a technique for mapping a certain URL to a function that is supposed to do a specific activity. It is used to navigate to a certain page in the online application.
+    --> app.route(rule, options)
+    --> The rule parameter represents URL binding with the function.
+    --> The options is a list of parameters to be forwarded to the underlying Rule object.
 
+    --> app.run(host, port, debug, options)
+    --> host
+        Hostname to listen on. Defaults to 127.0.0.1 (localhost). Set to ‘0.0.0.0’ to have server available externally
+    --> port
+        Defaults to 5000
+    --> debug
+        Defaults to false. If set to true, provides a debug information
+    --> options
+        To be forwarded to underlying Werkzeug server.
+
+
+8] flask request

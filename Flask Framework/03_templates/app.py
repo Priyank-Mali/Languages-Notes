@@ -1,6 +1,6 @@
 from flask import Flask
 from flask.templating import render_template
-from flask import make_response,redirect
+from flask import make_response,redirect,url_for
 from datetime import datetime
 
 app = Flask("__main__")
@@ -26,6 +26,21 @@ def about():
 def contact():
     # return redirect("/")
     return redirect("https://www.google.com")
+
+@app.route("/admin")
+def admin():
+    return "Hello Admin"
+
+@app.route("/guest/<guest>")
+def guest(guest):
+    return "Hello %s" % guest
+
+@app.route("/user/<name>")
+def hello(name):
+    if name == "Admin":
+        return redirect(url_for("admin"))
+    else:
+        return redirect(url_for("guest",guest=name))
 
 app.run(debug=True)
 

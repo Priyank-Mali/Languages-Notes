@@ -31,6 +31,15 @@ def check_num(number):
     else:
         return f"<h1>The {number} is Odd."
 
-app.add_url_rule("/contact","contact",contact)
+@app.route("/age/<int:age>")
+def age(age):
+    return "Your Age is : %d" % age
+"""
+int    %d
+float  %f
+string %s
+"""
+
+app.add_url_rule("/","contact",contact)
 if __name__ == "__main__":
     app.run(debug=True)
