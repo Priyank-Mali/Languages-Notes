@@ -65,3 +65,23 @@
 
 
 8] flask request
+
+9] Session Handling
+
+    --> Session handling is a process of managing the interactions between users and servers. The session is created when the user connects to a particular server for the first time. It can last as long as the user needs or it can be terminated by either of the two parties involved in that session.
+
+    --> The project was created to handle sessions without any dependencies on other libraries or frameworks and allows developers to use it with any framework they want. The team also provides a few examples of how it can be used in different applications like an e-commerce website or a social media app.
+
+    --> There are four types of sessions:
+        One-time session
+        Recurring session
+        Scheduled session
+        Customized session
+
+    --> For example, when a user logs into your website, his credentials will remain on the server until he logs out, regardless of which web page he sees after entering in. As a result, a session is used to manage this. Session Management is a method used by the Web container to keep track of a user's session information.
+
+10] What are session and cookies ? 
+
+    --> Cookies are client-side files that save user information on a local computer. User data is stored in sessions, which are server-side files. The lifetime of cookies is determined by the user. The session ends when the user closes the browser or logs out of the programme. It can only hold a certain quantity of data
+
+    --> cookies --> made on server --> stored in client side
