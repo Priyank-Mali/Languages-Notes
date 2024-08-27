@@ -85,3 +85,13 @@
     --> Cookies are client-side files that save user information on a local computer. User data is stored in sessions, which are server-side files. The lifetime of cookies is determined by the user. The session ends when the user closes the browser or logs out of the programme. It can only hold a certain quantity of data
 
     --> cookies --> made on server --> stored in client side
+
+11] HTTP status codes
+
+    --> The Status-Code element in a server response is a three-digit integer, with the first digit defining the response class and the remaining two digits serving no categorization function. S.N. Code and Description are two of the five possible values for the first digit.
+    
+        Informational responses ( 100 – 199 )
+        Successful responses    ( 200 – 299 )
+        Redirection messages    ( 300 – 399 )
+        Client error responses  ( 400 – 499 )
+        Server error responses  ( 500 – 599 )
