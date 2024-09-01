@@ -12,10 +12,17 @@ int main(){
     cout<<"Enter a Number: ";
     cin>>num;
     cout<<"The number is: "<<num<<endl;
+
+
+    int x,y;
+    cout<<"Enter Two Number with comma seprated: ";
+    char comma;
+    cin>>x>>comma>>y;
+    cout<<"X: "<<x<<" Y: "<<y;
     
     // add numbers -------------------------------
     int num1,num2;
-    cout<<"Enter Number 1: ";
+    cout<<"\nEnter Number 1: ";
     cin>>num1;
     cout<<"Enter Number 2: ";
     cin>>num2;
