@@ -5,6 +5,10 @@ Initial release to the public was in July 2005.
 """
 
 """
+frameworks and libraries are collections of pre-written resources, techniques, and functions created by developers to save time and effort.
+"""
+
+"""
 What is Django?
 Django is a Python framework that makes it easier to create web sites using Python.
 
