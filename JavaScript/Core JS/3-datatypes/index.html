@@ -6,6 +6,34 @@
     <title>Datatypes in JS</title>
 </head>
 <body>
-    
+    <script>
+
+        /**
+         * 1. Premitive : predefind datatypes : immutable (like dhoni -> retaired once)
+         * 
+         *      string   
+         *      number
+         *      boolean
+         *      undefind  : A variable that has been declared but not assigned a value.
+         *      null      : An explicit empty or non-existent value.
+         *      symbol    : Used for creating unique values.
+         *      bigint
+         * 
+         * 2. Non-Premitive :  mutable ( one data type you defined and changes its value in different manner)
+         *    shahid afridi -> retaired / come.. / reatired / come..
+         *  
+         * 
+         *      object   : {name : "priyank" , age : 99}
+         *      array    : [1,2,3,4]
+         *      regEx
+        */
+
+        var name = "priyank";
+        console.log(typeof name);
+
+        let num = BigInt(123)
+        console.log(num);   // 123n -->  n indicates its a valid big integer
+
+    </script>
 </body>
 </html>

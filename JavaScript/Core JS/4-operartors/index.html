@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators in JS</title>
+</head>
+<body>
+    <script>
+
+        // used to perform a operation on data
+
+        /**
+         * 1. Arithmetic    : +, -, *, /, % , ++, --
+         * 2. Comparison    : ==, ===, !=, !==, <, >, <=, >=
+         * 3. Logical       : && , || , !
+         * 4. Assignment    : = , += , -= , *= , /=
+         * 5. Bitwise       : & , | , ^ , ~ , << , >> 
+         * 6. Type          : typeof , instanceof 
+         * 7. Concatenation : + 
+         * 8. void          : 
+         * 9. Ternary       : condition ? exp 1(true) : exp 2(false)
+         * 
+        */
+
+        let name = "priyank";
+        console.log(name instanceof String); // false bcoz name is primitive datatype  In JavaScript, primitive strings (let name = "priyank";) are different from String onject
+
+        // If you want name to be considered an instance of String, you would need to create it using the String constructor like this:
+        let name1 = new String("priyank");
+        console.log(name1 instanceof String); 
+
+
+    </script>
+</body>
+</html>
