@@ -1,0 +1,66 @@
+<!-- Variables are Containers for Storing Data -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variables</title>
+  </head>
+  <body>
+    <script>
+        // Javascript variables can be declared in 4 ways:
+        
+        // Automatically
+        // var    : can be re-declared & updated.A global scope variable.
+        // let    : cannot be re-declared but can be updated.A block scope variable.
+        // const  : cannot be re-declared or updated.A block scope variable.
+
+        x = 5;
+        console.log(x);
+
+        var num = 10;  // initialize and diclaration
+        console.log(num);
+
+        var num1;
+        console.log(num1); // undefind
+
+        // var num = 11;
+
+        let num2 = 11;
+        console.log(num2); 
+
+        // let num1 = 110;
+
+        const pi = 3.14;
+        console.log(pi);
+        // pi = 2.12; // not shown error in vs code but shown error in console
+
+        x = null;
+        console.log(typeof x); // object
+
+        y = undefined;
+        console.log(typeof y); // undefind
+
+        z = NaN;
+        console.log(typeof z); // number
+
+
+        /**
+         * String Representation:  
+        */
+
+        // before ES6 (ECMA Script)
+        var total = 100;
+
+        document.write("<div>I Have ",total," &#8377;</div>");
+        document.write("<div>I Have " + total + " &#8377;</div>");
+
+        // after ES6
+
+        document.write(`<div>
+            I Have ${total} &#8377; 
+        </div>`)
+
+    </script>
+  </body>
+</html>

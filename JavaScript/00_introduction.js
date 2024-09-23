@@ -55,3 +55,25 @@ Life cycle : child             --> we do same to learn computer language(javascr
 */
 
 console.log("Hello, World!")
+/**
+ * visible in devloper tools
+ */
+
+document.write("Hello World!!")
+/**
+ * writes message to directy to the HTML document (display message on the webpage.)
+ * 
+ * document is an object that represents the HTML document loaded in the web browser. 
+ * It is part of the Document Object Model (DOM), which is a structured representation of the webpage that allows JavaScript to interact with and manipulate HTML content dynamically.
+ */
+
+
+
+/**
+   Writing into an HTML element, using  --> innerHTML.
+   Writing into the HTML output using   --> document.write().
+   Writing into an alert box, using     --> window.alert().
+   Writing into the browser console     --> console.log().
+ */
+
+
