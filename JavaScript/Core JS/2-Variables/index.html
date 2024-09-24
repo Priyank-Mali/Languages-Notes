@@ -15,6 +15,10 @@
         // let    : cannot be re-declared but can be updated.A block scope variable.
         // const  : cannot be re-declared or updated.A block scope variable.
 
+        // "use strict"
+        // n = 4;  // error --> a is not defind
+        // console.log(n);
+
         x = 5;
         console.log(x);
 
@@ -43,6 +47,26 @@
 
         z = NaN;
         console.log(typeof z); // number
+
+        // Implicit Type conversion
+        let a = "3";
+        console.log(a + 1);
+        console.log(a - 1);
+        console.log(a + true);
+        console.log(a - true);
+        console.log(typeof a);
+
+        // Explicit type conversion
+        let b = Number("3");
+        console.log(typeof b)
+        console.log(b + 1);
+        console.log(b - 1);
+
+        let c = 10.12;
+        console.log(parseInt(c));
+
+        let d = String(10);
+        console.log(typeof d  );
 
 
         /**
