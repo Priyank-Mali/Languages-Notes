@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .main{
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            display: grid;
+            place-content: center;
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+    <div class="main">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    
+    <script>
+        /**
+         * Document Object Model (DOM) is a platform and language-neutral interface that allows programs and scripts 
+         *      to dynamically access and update the content, structure, and style of a document.
+         * 
+         * The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+         * */
+
+        document.getElementById("p1").innerHTML = "<h1>Hello World</h1>";
+        document.getElementById("p2").innerText = "<h1>Good Morning</h1>";
+
+        let selector = document.getElementsByClassName("box");
+            for(let i=0;i<=selector.length;i++){
+                selector[i].style.backgroundColor = "#F08080";
+            }
+    </script>
+
+</body>
+</html>

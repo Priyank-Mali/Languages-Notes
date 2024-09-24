@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function in JS</title>
+</head>
+<body>
+    <script>
+
+        function myFunc(){
+            document.write("<div>Hello World</div>");
+        }
+
+        myFunc();
+
+        function message(msg){
+            document.write(`<div>${msg}</div>`);
+        }
+
+        message("good morning");
+
+        /**
+         * Special feature
+        */
+
+        function fun(){
+            console.log(arguments);
+        }
+
+        fun(1,2,3,4);
+        fun(12,"priyank",89);
+
+    </script>
+</body>
+</html>

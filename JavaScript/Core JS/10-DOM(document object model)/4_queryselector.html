@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queryselector in JS</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p class="p2"></p>
+
+    <div></div>
+    <div></div>
+
+    <input type="text" name="" id="" readonly>
+
+    <script>
+
+        // it returns first element selection.
+
+        document.querySelector("#p1").innerHTML = "id selector";
+        document.querySelector(".p2").innerHTML = "class selector";
+        document.querySelector("div").innerHTML = "element selector";
+        document.querySelector("input[type='text']").value = "attribute selector";
+    
+    </script>
+</body>
+</html>

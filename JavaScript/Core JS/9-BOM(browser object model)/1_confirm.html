@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm in JS</title>
+</head>
+<body>
+    
+    <button onclick="confirmBox()">Click Here</button>
+
+    <script>
+        function confirmBox(){
+            let msg = confirm("Are you sure to leave this page?");
+            if(msg){
+                alert("Good Bye !!");
+            }else{
+                alert("Welcome Again !!");
+            }
+        }
+    </script>
+
+</body>
+</html>

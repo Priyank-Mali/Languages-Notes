@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get By Name</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="username" id="">
+        <input type="text" name="username" id="">
+    </form>
+
+    <p id="p"></p>
+
+    <script>
+        let name = document.getElementsByName("username");
+        console.log(name);
+
+        document.getElementById("p").innerHTML = name.length;
+    </script>
+</body>
+</html>

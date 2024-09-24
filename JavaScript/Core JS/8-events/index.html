@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in JS</title>
+    <style>
+        div{
+            border: 1px solid black;
+            text-align: center;
+            padding: 20px;
+        }
+        input{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="parent" onmousedown="check()">parent
+        <div class="child">child</div>
+    </div>
+    
+    <input type="text" onkeyup="check()" name="" id="">
+
+    <script>
+
+        // change in state of an object is known as event
+
+        // JS react over this events and allow execution. this process of reacting over the events is called Event Handling
+
+        // JS handles the HTML events via Event Handlers
+
+        // There are 4 types of events
+
+        /**
+         * 1. Mouse Event
+         *      onclick / ondblclick / onmouseout / onmousedown / onmouseup / onmousemove / onmouseenter
+         * 2. Keyboard Event
+         *      onkeydown / onkeypress / onkeyup 
+         * 3. Form Event
+         *      onsubmit / onblur / onchange / onfocus
+         * 4. Window Event
+        */
+
+        function check(){
+            alert("Event Apply");
+        }
+
+
+
+    </script>
+
+</body>
+</html>

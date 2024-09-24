@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Open Close in JS</title>
+</head>
+<body>
+    <button onclick="openLink()">Open Link</button>
+    <button onclick="closeLink()">Close Link</button>
+
+    <script>
+        let openlink = "https://drive.google.com/file/d/1ieMl_RWUGB9svU88_-2D6xstRq2aOID6/view?ts=66ed0770&pli=1"
+        let closelink;
+        function openLink(){
+            closelink = window.open(openlink);
+        }
+
+        function closeLink(){
+            closelink.window.close();
+        }
+
+    </script>
+</body>
+</html>
