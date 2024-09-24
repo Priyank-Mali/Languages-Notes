@@ -8,9 +8,70 @@
 <body>
     <script>
 
-        "use strict"
-        x = 10;
-        console.log(x);
+        // if ------------------
+
+        let age = 17;
+        if(age>18){
+            console.log("You can drive");
+        }else{
+            console.log("Can't drive");
+        }
+
+        // ------------------------------------
+        let mode = "light";
+        let color;
+        if(mode == "dark"){
+            color = "black";
+        }
+        if(mode == "light"){
+            color = "pink";
+        }
+        console.log(color);
+        //-------------------------------------
+
+        let x = 10;
+        if(x%2==0){
+            console.log("Even");
+        }else{
+            console.log("Odd");
+        }
+
+        // ternary operator -------------------
+
+        let y = 11;
+        y%2==0 ? console.log("Even") : console.log("Odd");
+
+        // nested if --------------------------
+
+        var a = 4;
+        if(a>0){
+            if(a>5){
+                console.log("a is greater than 5");
+            }else{
+                console.log("a is less than 5");
+            }
+        }else{
+            console.log("a is less than 0");
+        }
+
+        // ------------------------------------
+        a = 11;
+        a>0 ? (a>5 ? console.log("a is greater than 5") : console.log("a is less than 5")) : console.log("a is less than 0");
+
+        // switch -----------------------------
+
+        var fruit = "apple";
+        switch(fruit){
+            case "apple":
+                console.log("It's an apple");
+                break;
+            case "banana":
+                console.log("It's a banana");
+                break;
+            default:
+                console.log("Not a fruit");
+                break;
+        }
 
     </script>
 </body>
