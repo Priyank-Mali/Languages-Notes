@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Method in JS</title>
+</head>
+<body>
+    <div>
+        <label for="faq">Add FAQ Questions: </label>
+        <input type="text" id="faq">
+
+        <div>
+            <button onclick="addQus()">Add Question</button>
+        </div>
+
+        <div>
+            FAQs are : 
+            <select name="" id="questions">
+                <option value="">---select---</option>
+            </select>
+        </div>
+    </div>
+
+    <script>
+        function addQus(){
+            let myques = document.getElementById("faq").value;
+            let list = document.getElementById("questions");
+            let option = document.createElement("option");
+            option.text = myques;
+            list.add(option);
+
+        }
+    </script>
+</body>
+</html>
