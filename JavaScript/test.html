@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Enter FAQ Here : </p>
+    <input type="text" name="ques" id="ques">
+    <button onclick="addQues()">add ques</button>
+<br>
+<hr>
+    <select>
+        <option value="">--select--</option>
+    </select>
+
+    <script>
+        function addQues(){
+           
+            let myques = document.getElementById("ques").value;
+            let list = document.getElementsByName("select");
+            let questions = document.createElement("option");
+            
+            questions.text = myques;
+            list.add(questions);
+
+        }
+    </script>
+  </body>
+</html>

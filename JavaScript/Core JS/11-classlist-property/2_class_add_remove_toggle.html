@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Remove Toggle Contains</title>
+    <style>
+        button {
+            padding: 20px;
+            font-size: 20px;
+        }
+        .mydiv{
+            margin: 10px;
+            padding: 10px;
+            transition: 0.6s all;
+            border: 1px solid black;
+        }
+        /* create a class which is not exists */
+
+        .setdiv{
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid red;
+            transition: 0.6s all;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="addClass()">ADD</button>
+    <button onclick="removeClass()">REMOVE</button>
+    <button onclick="toggleClass()">TOGGLE</button>
+    <button onclick="containClass()">CONTAINS</button>
+
+    <div class="mydiv">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolores quaerat sed tempore? Aut incidunt, rerum nobis, dolorum placeat rem non aspernatur reiciendis facilis vel quos iste quo sequi perspiciatis.
+    </div>
+
+    <div class="mydiv" id="div1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, mollitia recusandae, nobis, similique sed
+        repellendus labore quaerat dolor expedita reprehenderit nam. Magnam tenetur, quo totam perferendis quae eligendi
+        autem necessitatibus.
+    </div>
+
+    <script>
+        function addClass(){
+            let div = document.querySelector(".mydiv");
+            div.classList.add("setdiv");
+        }
+
+        function removeClass(){
+            let div = document.querySelector(".mydiv");
+            div.classList.remove("mydiv");
+        }
+
+        function toggleClass(){
+            let div = document.querySelector(".mydiv");
+            div.classList.toggle("setdiv");
+        }
+
+        function containClass(){
+            let div = document.querySelector(".mydiv");
+            if(div.classList.contains("setdiv")){
+                alert("Class Exists");
+            }else{
+                alert("Class Not Exists");
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Enter FAQs Here : </h2>
+    <input type="text" name="" id="myques">
+    <button onclick="addQues()">ADD QUES</button>
+    <hr>
+    <select name="" id="select">
+        <option value="">--select--</option>
+    </select>
+
+    
+    <script>
+        
+        function addQues(){
+            let myques = document.getElementById("myques").value;
+            let list = document.getElementById("select");
+            let options = document.createElement("option");
+            
+            options.text = myques;
+            list.add(options);
+        }
+
+    </script>
+</body>
+</html>

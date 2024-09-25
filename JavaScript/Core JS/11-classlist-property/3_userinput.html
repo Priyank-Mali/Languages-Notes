@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Userinput</title>
+    <style>
+         input {
+            border: 1px solid gray;
+        }
+        :focus-visible{
+            outline: none;
+        }
+        .err{
+            color: red;
+        }
+        .error{
+            border: 1px solid red;
+        }
+        #msg{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action="#">
+        <div>
+            <label for="">Enter City : </label>
+            <input type="text" name="city" id="city" >
+            <span id="err"></span>
+        </div>
+        <div>
+            <button onclick="addCity()">SUBMIT</button>
+        </div>
+    </form>
+
+    <div>
+        <p>You Entered : <span id="msg"></span></p>
+    </div>
+
+        <script>
+            function addCity(){
+                let city = document.getElementById("city")
+                if(city.value == ""){
+                    document.getElementById("err").innerHTML = "Please Enter City Name";
+                    // let span = document.getElementById("err")
+                    // span.classList.add("err");
+                    city.classList.add("error")
+                }else{
+                    document.getElementById("err").innerHTML = null
+                    city.classList.remove("error")
+                    document.getElementById("msg").innerHTML = city.value
+                    city.value = ""
+                }
+
+                return false
+            }
+        </script>
+</body>
+</html>
