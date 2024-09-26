@@ -1,32 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
-
-    <h2>Enter FAQs Here : </h2>
-    <input type="text" name="" id="myques">
-    <button onclick="addQues()">ADD QUES</button>
-    <hr>
-    <select name="" id="select">
-        <option value="">--select--</option>
-    </select>
-
-    
-    <script>
-        
-        function addQues(){
-            let myques = document.getElementById("myques").value;
-            let list = document.getElementById("select");
-            let options = document.createElement("option");
-            
-            options.text = myques;
-            list.add(options);
+    <style>
+        h2 {
+            width: fit-content;
+            margin: auto;
         }
 
+        h3,
+        h4 {
+            border: 1px solid black;
+            margin: 0;
+            padding: 10px;
+        }
+
+        input {
+            width: 400px;
+            margin: 10px;
+        }
+
+        div {
+            text-align: center;
+        }
+
+        #maintask {
+            margin: auto;
+            border: 1px solid black;
+            width: 80%;
+        }
+
+        h3 {
+            color: rgb(171, 22, 166);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>To Do List</h2>
+    <div>
+        <input type="text" name="" id="list" placeholder="Enter a task"
+            onkeydown="if(event.key === 'Enter') addTasks()">
+        <button onclick="addTasks()">ADD TASK</button>
+    </div>
+    <hr>
+
+    <div id="tasklist">
+        <div id="maintask">
+            <h3>TASKS</h3>
+            <h4>Hello World <span><button>DONE</button></span><span><button>REMOVE</button></span></h4>
+        </div>
+    </div>
+
+    <script>
+        function addTasks() {
+
+            let h4 = document.createElement("h4");
+
+            let list = document.getElementById("list");
+
+            let tasklist = document.getElementById("maintask");
+
+            if (list.value == "") {
+                alert("Can't be Empty");
+            } else {
+                h4.append(list.value);
+                document.getElementById("maintask").appendChild(h4);
+
+                document.getElementById("tasklist").appendChild(tasklist);
+            }
+            list.value = null;
+        }
+
+        function done() {
+
+        }
     </script>
+
 </body>
+
 </html>
