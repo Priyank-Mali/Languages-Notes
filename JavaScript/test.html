@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <p>Enter FAQ Here : </p>
-    <input type="text" name="ques" id="ques">
-    <button onclick="addQues()">add ques</button>
-<br>
-<hr>
-    <select>
-        <option value="">--select--</option>
-    </select>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #main{
+      padding: 10px;
+      border: 1px solid black;
+    }
+    .container{
+      background-color: yellow;
+      color: red;
+      width: 50%;
+      transition: 0.1s all;
+    }
+  </style>
+</head>
+<body>
+  <button id="btn">ADD</button>
+  <button id="btn2">REMOVE</button>
+  <button onclick="">TOGGLE</button>
 
-    <script>
-        function addQues(){
-           
-            let myques = document.getElementById("ques").value;
-            let list = document.getElementsByName("select");
-            let questions = document.createElement("option");
-            
-            questions.text = myques;
-            list.add(questions);
+  <hr>
 
-        }
-    </script>
-  </body>
+  <div id="main">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, sit consectetur. Provident sunt dicta voluptatem fugit quod inventore doloribus officiis ad! Esse numquam aliquam tempore quia explicabo voluptates architecto animi!
+  </div>
+
+  <script>
+    
+    function fun(){
+      alert("remove click after click on ok");
+      btn.removeEventListener("click",fun);
+    }
+
+    let btn = document.getElementById("btn");
+    btn.addEventListener("click",fun);
+
+  </script>
+</body>
 </html>

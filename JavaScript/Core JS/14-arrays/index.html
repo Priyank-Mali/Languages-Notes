@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // index : value 
+
+        // let num = [1, 2, 3];
+        // console.log(typeof num); // object
+        // console.log(num.length);
+
+        // num[0] = 100;
+        // console.log(num); // mutable
+
+        // let x = Array();
+        // console.log(x);
+
+        // let ar1 = [1, 2, 3, 4, 5, 6];
+        // for (let i = 0; i < ar1.length; i++) {
+        //     console.log(ar1[i]);
+        // }
+
+        // ar1 = ["surat", "mumbai", "delhi"];
+        // for (let i of ar1) {
+        //     console.log(i);
+        // }
+
+        // for (let i in ar1) {
+        //     console.log(i);
+        // }
+
+        /**
+         * Array Methods: 
+         * 
+         * push() : add element at ends
+         * 
+         * pop() : delete from end & return -> not changing original array
+         * 
+         * toString() : converts array to string
+         * 
+         * join()
+         * 
+         * concat() : joins multiple array & return result
+         * 
+         * unshift() : add element at beigining
+         * 
+         * shift() : delete from start & return
+         * 
+         * slice() : return piece of array
+         * 
+         * splice() : change original array(add,remove,replace)
+         * 
+         * reverse() 
+         * 
+         * sort()
+        */
+
+        ar1 = [99, 88, 77, 66, 55];
+        ar1.push(101);
+        console.log(ar1);
+
+        ar1.pop();
+        console.log(ar1);
+
+        console.log(ar1.slice(0,3));
+        console.log(ar1.slice(2,-1));
+
+        console.log(ar1.splice(1,3));
+        console.log(ar1)
+
+        console.log(ar1.splice(0,1,101,110,121));
+        console.log(ar1);
+
+        let ar2 = ar1.toString()
+        console.log(typeof ar2);
+
+        let z = ['p', 'r', 'i', 'y', 'a', 'n', 'k'];
+        console.log(z.join());
+        console.log(z.join(""));
+        console.log(z.join(" "));
+        console.log(z.join("@"));
+
+        console.log(z.shift())
+        z.unshift("q")
+        console.log(z);
+
+
+
+        let marvelheros = ["ironman", "spiderman", "thor"];
+        let dcheros1 = ["batman", "superman"];
+
+        let heros = marvelheros.concat(dcheros1);
+        console.log(heros);
+
+        
+        let arry4 = [5,32,56,6,7,3,2,5,7,8,1,0,-1,-4,-56]
+        console.log(arry4.sort())
+
+        // not sorting we have to pass logic inside sort()
+        // a-b = (-1) --> a<b
+        // a-b = (+1) --> a>b
+        // a-b = (0)  --> a=b
+
+        console.log(arry4.sort((a,b)=> a-b))
+        console.log(arry4.sort((a,b)=> b-a))
+        // arr4.sort((a,b) => a-b)
+        // // arr4.sort((a,b) => b-a)
+        // console.log(arr4)
+
+
+
+    </script>
+</body>
+
+</html>

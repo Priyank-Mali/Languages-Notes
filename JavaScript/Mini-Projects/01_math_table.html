@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Table</title>
+    <style>
+        body{
+            background-color: rgba(0,0,0,0.4);
+        }
+        h2{
+            margin: auto;
+            text-decoration: dashed;
+            border: 1.5px dashed black;
+            width: fit-content;
+            padding: 10px;
+        }
+        .main {
+            display: grid;
+            grid-template-columns: 40% 50%;
+            gap: 40px;
+            place-content: center;
+            margin: 20px;
+        }
+        .container{
+            padding: 20px;
+            border: 1px solid black;
+            display: flex;
+            gap: 20px;
+            box-shadow: 4px 5px gray;
+            height: fit-content;
+            align-items: center;
+        }
+        .container:nth-child(1){
+            color: yellow;
+            font-size: 22px;
+            text-transform: capitalize;
+        }
+        #table{
+            border: 1px solid black;
+        }
+
+        input {
+            width: 100px;
+            height: 40px;
+            font-size: 30px;
+            padding: 10px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid blue;
+            outline: none;
+        
+        }
+
+        button {
+            border: none;
+            width: 150px;
+            height: 50px;
+            background-color: rgb(18, 139, 169);
+            color: white;
+            font-size: 17px;
+            border-radius: 10px;
+            transition: 0.5s all;
+        }
+        button:hover{
+            border-radius: 10px 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CREATE TABLE OF ANY NUMBER </h2>
+    <div class="main">
+        <div class="container">
+            <p>Enter any Number : </p>
+            <input type="number" name="" id="input">
+            <button onclick="multipy()" id="btn" disabled>DISPLAY</button>
+        </div>
+        <div id="table"></div>
+    </div>
+
+    <script>
+        let number = document.getElementById("input");
+
+        let bt = document.getElementById("btn");
+
+        number.addEventListener("input",() =>{
+            if(number.value){
+                bt.removeAttribute("disabled");
+            }else{
+                bt.setAttribute("disabled",true);
+            }
+        });
+
+        // function multipy(){
+        //     for(let i=1;i<=10;i++){
+        //         let multiplication = document.createElement("p");
+        //         multiplication.innerHTML = `${number.value} * ${i} = ${number.value*i}`;
+        //         document.getElementById("table").appendChild(multiplication);
+        //     }
+        //     number.value = "";
+        //     bt.setAttribute("disabled",true);
+        // }
+
+        function multipy(){
+            let tablecontent = '';
+
+            for(let i=1;i<=10;i++){
+                tablecontent += `<p>${number.value} * ${i} = ${number.value*i}</p>`;
+            }
+
+            document.getElementById("table").innerHTML = tablecontent;
+
+            number.value = "";
+            bt.setAttribute("disabled",true); 
+        }
+
+    </script>
+
+</body>
+
+</html>
