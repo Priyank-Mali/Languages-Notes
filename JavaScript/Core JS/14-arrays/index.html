@@ -115,6 +115,78 @@
         // console.log(arr4)
 
 
+        // map ---------------------
+        let a = [1,2,3,4,5,6,7,8];
+        let n = a.map((value,index,array) => {
+            return `${value} , ${index} , ${array}`
+        });
+
+        console.log(n);
+        n = a.map(num => num*num);
+        console.log(n)
+
+
+        // for in 
+        for(let ar in a){
+            console.log(a[ar]);
+        }
+
+        // for of
+        for(let aq of a){
+            console.log(aq);
+        }
+
+
+        // multidimensional array
+
+        let arrrr = [
+            ["priyank" , 99],
+            ["mali" , 88],
+            ["john" , 77]
+        ]
+
+        console.log(arrrr[2][1]);
+
+        for (let i = 0; i < arrrr.length; i++){
+            for (let j = 0; j < arrrr[i].length; j++) {
+                console.log(arrrr[i][j]);
+            }
+        }
+
+        arrrr.forEach(element => {
+            element.forEach(e => {
+                console.log(e);
+            });
+        });
+
+
+
+        // copy
+
+        let q = ["john",99,true];
+        let w = q;
+        // q.push("hello");
+        // w.push("hello");
+        console.log(w);
+        console.log(q);
+
+        // w = q.slice(0)
+        w = [...q];
+        w.push("hello");
+        console.log(w);
+
+
+        // destruct in array
+
+        q = ["john",99,true,null,undefined];
+        // let item1 = q[0];
+        // let item2 = q[1];
+        // let item3 = q[2];
+        let [item1,item2,...item3] = q;
+
+        console.log(item1);
+        console.log(item2);
+        console.log(item3);
 
     </script>
 </body>

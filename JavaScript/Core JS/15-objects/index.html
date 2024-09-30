@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JS</title>
+</head>
+<body>
+    <script>
+        let obj = {
+            "name" : "priyank",
+            "age" : 99,
+            fun : function(){
+                console.log("Hello World");
+            },
+            arr : [1,2,3,4]
+        }
+
+        console.log(obj);
+
+        for (const key in obj) {
+            if (Object.prototype.hasOwnProperty.call(obj, key)) {
+                const element = obj[key];
+                console.log(element)
+                
+            }
+        }
+    </script>
+</body>
+</html>
