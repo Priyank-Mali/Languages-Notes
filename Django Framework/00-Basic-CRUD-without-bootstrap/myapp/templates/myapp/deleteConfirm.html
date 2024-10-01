@@ -1,0 +1,42 @@
+{% extends "myapp/layout.html" %}
+
+{% block title %}Delete Confirm{% endblock %}
+
+{% block style %}
+    <style>
+        form{
+            width: 70%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        button,a{
+            font-size: 17px;
+            border: 1px solid black;
+            padding: 10px 20px;
+            color: white;
+        }
+        button{
+            background-color: green;
+        }
+        a{
+            background-color: red;
+            text-decoration: none;
+        }
+        button,a{
+            cursor: pointer;
+            margin-right: 20px;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <form action="{% url "deleteMobile" mobile_id=obj.mobile_id %}" method="post">
+        {% csrf_token %}
+        <h2>Are You Sure To Delete <span style="color: blue;">{{obj}}</span> ?</h2>
+        <button type="submit">Yes</button>
+        <a href="/">No</a>
+    </form>
+
+
+{% endblock %}
