@@ -7,6 +7,37 @@
 </head>
 <body>
     <script>
+        /*  
+        Object is an entity which have state and behaviour
+        It has key-value pair
+        Every thing in js is object  
+        */
+
+        // There are three methods to create object
+        /**
+         * 1) By Object Literal
+         * 
+         *      let object_name = { pr1 : value1 , pr2 : valu2};
+         * 
+         * 2) By creating instance of object
+         * 
+         *      var object_name = new Object();
+         *      object_name.id = 1,
+         *      object_name.name = "priyank",
+         * 
+         * 3) By using Object Constructor
+         * 
+         *      <scrip>
+         *          function employee(id,name,salary){
+         *      thid.id = id,
+         *      thid.name = name,
+         *      this.salary = salary
+         * }
+         *      emp = employee(1,"priyank",1000)
+         * 
+         *      </scrip>
+        */
+
         let obj = {
             "name" : "priyank",
             "age" : 99,
@@ -16,15 +47,39 @@
             arr : [1,2,3,4]
         }
 
-        console.log(obj);
+        // console.log(obj);
 
         for (const key in obj) {
             if (Object.prototype.hasOwnProperty.call(obj, key)) {
                 const element = obj[key];
-                console.log(element)
-                
+                console.log(element)      
             }
         }
+
+        // few ways to iterate over an object in JavaScript
+
+        // 1) Using Object.keys()
+        
+        // console.log(Object.keys(obj)) // it return all key in array
+
+        Object.keys(obj).forEach(key =>{
+            console.log(obj[key]);
+        });
+
+        // 2) Using Objects.values()
+
+        // console.log(Object.values(obj))
+        Object.values(obj).forEach(value => {
+            console.log(value);
+        })
+
+        // 3) Using Objects.entries()
+
+        console.log(Object.entries(obj));
+        Object.entries(obj).forEach(([key,value]) => {
+            console.log(key,value)
+        })
+
     </script>
 </body>
 </html>

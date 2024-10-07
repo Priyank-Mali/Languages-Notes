@@ -40,6 +40,30 @@ application of javascript:
 --> IOT(machine to machine comunication)
 --> mobile app development
 
+--> Web Devlopment : 
+      jQuery
+      Angular js
+      React js
+      VueJs
+      NodeJs
+
+--> Desktop App
+      Electron js 
+
+--> Examples:
+   Dropdown Menu
+   Animated Sliders
+   Maps
+   Chart-graphs
+   pop-up window
+   audio players
+   video player
+   zoom effects
+   animated gallery
+   form validations
+   accordions
+   calendar
+
 Life cycle : child             --> we do same to learn computer language(javascript / java / python ...)
 
 1. born                        --> install 
@@ -67,13 +91,32 @@ document.write("Hello World!!")
  * It is part of the Document Object Model (DOM), which is a structured representation of the webpage that allows JavaScript to interact with and manipulate HTML content dynamically.
  */
 
-
-
 /**
    Writing into an HTML element, using  --> innerHTML.
    Writing into the HTML output using   --> document.write().
    Writing into an alert box, using     --> window.alert().
    Writing into the browser console     --> console.log().
+ */
+
+/**
+ * JavaScript is a Event Based Programming Language
+ * 
+ * click
+ * Double Click
+ * 
+ * Right Click
+ * Mouse Out
+ * Mouse Hover
+ * Drag Drop
+ * 
+ * key press
+ * key up
+ * 
+ * load
+ * unload
+ * resize
+ * scroll
+ * 
  */
 
 

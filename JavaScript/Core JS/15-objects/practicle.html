@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            gap: 10px;
+        }
+        .container-body{
+            box-shadow: 1px 2px 4px gray;
+            /* padding: 10px; */
+            display: flex;
+            align-items: center;
+        }
+        .container-image{
+            width: 200px;
+            height: 200px;
+        }
+        .container-body img{
+            max-width: 100%;
+            margin-top: 30px;
+
+        }
+        .container-text{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+       
+    </div>
+
+    <script>
+        
+        let mobiles = [
+            {
+                id : 1,
+                image : "https://d2xamzlzrdbdbn.cloudfront.net/products/7658845b-e99e-41ca-95d1-8b058ea1461e24111039_416x416.jpg",
+                heading : "Apple iPhone 16",
+                price : "MRP : ₹89,900",
+                l1 : "Built for Apple Intelligence",
+                l2 : "iOS 18 Operating System",
+                l3 : "A18 chip with 5-core GPU",
+                l4 : "6.1-inch all-screen OLED display (Super Retina XDR display)"
+            },
+            {
+                id : 2,
+                image : "https://d2xamzlzrdbdbn.cloudfront.net/products/7a2fa2fb-326d-4223-bf71-1d494ca44b7524110955_416x416.jpg",
+                heading : "Apple iPhone 16",
+                price : "MRP : ₹99,900",
+                l1 : "Built for Apple Intelligence",
+                l2 : "iOS 18 Operating System",
+                l3 : "A18 chip with 5-core GPU",
+                l4 : "6.1-inch all-screen OLED display (Super Retina XDR display)"
+            },
+            {
+                id : 3,
+                image : "https://d2xamzlzrdbdbn.cloudfront.net/products/fa7f3bfd-28ce-41ea-80a0-58926a92bccb24111024_182x182.jpg",
+                heading : "Apple iPhone 16",
+                price : "MRP : ₹1,09,900",
+                l1 : "Emergency SOS",
+                l2 : "IP68 Splash, Water and Dust Resistant",
+                l3 : "12 MP Front Camera",
+                l4 : "48MP Main + 12MP Ultra Wide Primary Camera"
+            },
+        ]
+
+        let div = document.querySelector(".container")
+        // for(let i=0;i<mobiles.length;i++){
+        //     console.log(mobiles[i]);
+        //     for (const key in mobiles[i]) {
+        //         div.innerHTML += `
+        //             <div class="container-body">
+        //                 <img class="image" src="${mobiles[i].image}" alt="">
+        //                 <h3 class="heading">${mobiles[i].heading}</h3>
+        //                 <p class="price">MRP : ₹${mobiles[i].price}</p>
+        //                 <p>HIGHLIGHT</p>
+        //                 <ul>
+        //                     <li class="l1">${mobiles[i].l1}</li>
+        //                     <li class="l2">${mobiles[i].l2}</li>
+        //                     <li class="l3">${mobiles[i].l3}</li>
+        //                     <li class="l4">${mobiles[i].l4}</li>
+        //                 </ul>
+        //             </div>
+        //         `
+        //     }
+        // };
+
+        mobiles.forEach(element => {
+            div.innerHTML += `
+                <div class="container-body">
+                    <div class="container-image">
+                        <img class="image" src="${element.image}" alt="">
+                    </div>
+                    <div class="container-text">
+                        <h3 class="heading">${element.heading}</h3>
+                        <p class="price">MRP : ₹${element.price}</p>
+                        <p>HIGHLIGHT</p>
+                        <ul>
+                            <li class="l1">${element.l1}</li>
+                            <li class="l2">${element.l2}</li>
+                            <li class="l3">${element.l3}</li>
+                            <li class="l4">${element.l4}</li>
+                        </ul>
+                    </div>
+                </div>
+            `
+        });
+    </script>
+
+</body>
+</html>
