@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        form{
+        form {
             width: fit-content;
             padding: 20px;
             border: 2px solid black;
             margin: 100px auto;
         }
+
         :focus-visible {
             outline: none;
         }
+
         input[type="text"],
         [type="password"] {
             height: 25px;
@@ -21,6 +24,7 @@
             padding: 5px;
             border: 1px solid gray
         }
+
         .row {
             padding: 5px 0;
         }
@@ -29,16 +33,19 @@
             color: red;
             font-size: 13px;
         }
+
         .err {
             border: 1px solid red;
         }
     </style>
 </head>
+
 <body>
 
     <form action="">
         <div class="row">
-            <input type="password" name="" id="pwd" maxlength="16" placeholder="Enter Password" onkeyup="return checkPassword()">
+            <input type="password" name="" id="pwd" maxlength="16" placeholder="Enter Password"
+                onkeyup="return checkPassword()">
             <div class="msg" id="msg"></div>
             <div class="msg" id="msg"></div>
         </div>
@@ -52,29 +59,49 @@
     </form>
 
     <script>
-        function checkPassword(){
+        function checkPassword() {
             let password = document.getElementById("pwd").value;
-            let pattern = /^[a-z]+[A-Z0-9]+[@$#_]*$/
-            if(pattern.test(password)){
-                document.getElementById("msg").innerHTML = null
-            }else{
-                document.getElementById("msg").innerHTML = `<ul>
-                    <li>password has one capital</li>
-                    <li>password has lowercase and number</li> 
-                    <li> password has special character(@$#) Ex, Test@123</li>
-                </ul>`
+
+            // let pattern = /^[a-z]+[A-Z0-9]+[@$#_]*$/
+
+            let pattern = /[A-Z]/.test(password) && /[a-z]/.test(password) && /[@#$_]/.test(password) && /\d/.test(password)
+            // \d or [0-9]
+
+            let hasUpper = /[A-Z]/.test(password);
+            let hasLower = /[a-z]/.test(password);
+            let hasNumber = /\d/.test(password);
+            let hasSpecial = /[@$#]/.test(password);
+
+            if (password.length < 6 || (hasLower && !hasUpper && !hasNumber && !hasSpecial)) {
+                document.getElementById("msg").innerHTML = "small"
+            } else if (hasLower && hasUpper && hasNumber && hasSpecial && password.length >= 6) {
+                document.getElementById("msg").innerHTML = "Strong";
+            } else {
+                document.getElementById("msg").innerHTML = "Medium";
             }
+
+
+            // if (pattern) {
+            //     document.getElementById("msg").innerHTML = null
+            // } else {
+            //     document.getElementById("msg").innerHTML = `<ul>
+            //         <li>password has one capital</li>
+            //         <li>password has lowercase and number</li> 
+            //         <li> password has special character(@$#) Ex, Test@123</li>
+            //     </ul>`
+            // }
         }
 
-        function showPassword(){
+        function showPassword() {
             let password = document.getElementById("pwd");
-            if(password.type == "password"){
+            if (password.type == "password") {
                 password.type = "text";
-            }else{
+            } else {
                 password.type = "password";
             }
         }
 
     </script>
 </body>
+
 </html>
