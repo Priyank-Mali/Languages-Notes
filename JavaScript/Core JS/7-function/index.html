@@ -14,6 +14,7 @@
 
         myFunc();
 
+        // function with parameter
         function message(msg){
             document.write(`<div>${msg}</div>`);
         }
@@ -30,6 +31,18 @@
 
         fun(1,2,3,4);
         fun(12,"priyank",89);
+
+        // function with return value
+
+        function greeting(fisrtname,lastname){
+            let a = fisrtname + "" + lastname;
+            return a;
+        }
+
+        let x = greeting("priyank","mali");
+        console.log(x);
+
+        window.document.write("Hello ");
 
     </script>
 </body>

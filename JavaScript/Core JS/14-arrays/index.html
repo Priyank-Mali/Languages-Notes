@@ -16,6 +16,14 @@
         // console.log(typeof num); // object
         // console.log(num.length);
 
+        // var a = [10,20,30]
+
+        var a = new Array(); // constructor method
+        // a[0] = 10
+        // a[1] = 20
+        // .....
+
+
         // num[0] = 100;
         // console.log(num); // mutable
 
@@ -35,6 +43,23 @@
         // for (let i in ar1) {
         //     console.log(i);
         // }
+
+        let arr = [
+            ["sadasd",12,"male","sadasd"],
+            ["sadasd",12,"male","sadasd"],
+            ["sadasd",12,"male","sadasd"],
+            ["sadasd",12,"male","sadasd"]
+        ]
+
+        document.write(`<table border='1px' cellspacing="0">`);
+        for (let i=0;i<arr.length;i++){
+            document.write(`<tr>`);
+            for(let j=0;j<arr[i].length;j++){
+                document.write(`<td>${arr[i][j]}</td>`)
+            }
+            document.write(`</tr>`)
+        }
+        document.write(`</table>`); 
 
         /**
          * Array Methods: 

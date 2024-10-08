@@ -1,24 +1,12 @@
-let obj = {
-    name : "psiyan",
-    jasd : "adkjasd",
-    asdhk : "adlsad"
+function hello(msg){
+    console.log(`hi ${msg}`);
 }
 
-// for (const key in obj) {
-//     if (Object.prototype.hasOwnProperty.call(obj, key)) {
-//         console.log(`${key} --> ${obj[key]}`);  
-//         console.log(`${key} --> ${obj.key}`);  
-//     }
-// }
+hello("priyank");
 
-arr = [11,12,13,14]
 
-arr.forEach((index,value) => {
-    console.log(value,index);
-});
+function custom(firstname = "priyank",lastname){
+    console.log("Hello "+ firstname + " " + lastname)
+}
 
-// console.log(Object.keys(obj))
-
-// Object.keys(obj).forEach(element => {
-//     console.log(obj[element]);
-// })
+custom("rahul","mali");
