@@ -64,7 +64,10 @@
 
             // let pattern = /^[a-z]+[A-Z0-9]+[@$#_]*$/
 
-            let pattern = /[A-Z]/.test(password) && /[a-z]/.test(password) && /[@#$_]/.test(password) && /\d/.test(password)
+            let pattern = /[A-Z]/.test(password) && 
+                         /[a-z]/.test(password) &&
+                         /[@#$_]/.test(password) &&
+                         /\d/.test(password)
             // \d or [0-9]
 
             let hasUpper = /[A-Z]/.test(password);
@@ -79,6 +82,7 @@
             } else {
                 document.getElementById("msg").innerHTML = "Medium";
             }
+           
 
 
             // if (pattern) {
