@@ -7,4 +7,18 @@
 
 
 let number = 1;
-console.log(num)
+// console.log(num)
+
+let a = "99";
+let num = Number(a);
+console.log(num);
+
+let x = Number(true)
+console.log(x)
+
+let y = Number("55 66");
+console.log(y);
+
+let z = parseInt("23 45");
+console.log(z)
+

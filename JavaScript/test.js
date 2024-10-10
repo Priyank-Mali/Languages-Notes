@@ -1,12 +1,8 @@
-function hello(msg){
-    console.log(`hi ${msg}`);
+let obj = {
+    name : "priyank",
+    age : 99
 }
 
-hello("priyank");
-
-
-function custom(firstname = "priyank",lastname){
-    console.log("Hello "+ firstname + " " + lastname)
-}
-
-custom("rahul","mali");
+for(let i in obj){
+    console.log(obj[i]);
+} 
