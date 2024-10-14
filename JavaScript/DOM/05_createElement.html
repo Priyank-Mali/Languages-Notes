@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element in JS</title>
+    <style>
+        .adddiv{
+            border: 2px solid red;
+            width: 300px;
+            height: 300px;
+            background-color: lime;
+        }
+    </style>
+</head>
+<body>
+    <div class="container bg-red side ">
+        <div id="box">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, minima ducimus, corrupti dicta quas sunt, explicabo sapiente sint soluta officiis saepe. Enim fugiat ipsa dignissimos velit, accusamus quisquam voluptatibus sint?
+        </div>
+    </div>
+
+    <script>
+        // createElement
+
+        // append
+        // prepend
+        // before
+        // after
+        // replaceWith
+
+        let div = document.querySelector(".container");
+        let newDiv = document.createElement("div");
+        newDiv.innerHTML = "lorem jahdas dsajkdhljashd asldksd";
+        newDiv.setAttribute("style","border: 1px solid black; color: red;");
+        div.append(newDiv);
+        // div.prepend(newDiv);
+        // div.after(newDiv);
+        // div.before(newDiv);
+
+        // =================================================
+        // afterbegin
+        // afterend
+        // beforebegin
+        // beforeend
+        div.insertAdjacentHTML("afterbegin","<b>Hello World</b>");
+        div.insertAdjacentHTML("afterend","<b>Hello World</b>");
+
+        // =================================================
+        console.log(document.querySelector(".container").classList);
+        console.log(document.querySelector(".container").className);
+        const mydiv = document.querySelector(".container");
+        // mydiv.classList.add("adddiv");
+        // mydiv.classList.remove("adddiv");
+        mydiv.classList.toggle("adddiv");
+
+    </script>
+    
+</body>
+</html>

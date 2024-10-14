@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Card Generator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            padding: 10px;
+        }
+        .content{
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+        .thumbnail{
+            position: relative;
+        }
+        .content .thumbnail span{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background-color: black;
+            color: white;
+            margin: 10px;
+        }
+        .content .text-content span{
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="main">
+       
+    </div>
+    
+    <script>
+        function createContent(image,time,title,name,views,days){
+            let viewsCalculate;
+            if(views>999 && views<100000){
+                viewsCalculate = views/1000 + "K";
+            }else if(views>1000000){
+                viewsCalculate = views/1000000 + "M";
+            }
+            let html = `
+                 <div class="content" >
+                    <div class="thumbnail" id="thumb">
+                        <img src="${image}" alt="">
+                        <span>${time}</span>
+                    </div>
+                    <div class="text-content" id="textContent">
+                        <h1>${title}</h1>
+                        <p>${name} . ${viewsCalculate} views . ${days}</p>
+                    </div>
+                </div>
+            `
+            document.getElementById("main").innerHTML += html;
+        }
+        
+        createContent("https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDxR2Iy74ubFQvvf2uP0BepdJ_GNw","12.43","Installing VS Code & how websites work | sigma web development course-tutorial #1","codewithharry",10000000,"1 year ago");
+        createContent("https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDxR2Iy74ubFQvvf2uP0BepdJ_GNw","12.43","Installing VS Code & how websites work | sigma web development course-tutorial #1","codewithharry",1230000,"1 year ago");
+    
+    </script>
+</body>
+</html>

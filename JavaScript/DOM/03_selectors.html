@@ -14,10 +14,10 @@
     </style>
 </head>
 <body>
-    <div class="conatiner">
+    <div class="container">
         <!-- childs -->
         <div class="box">1</div>
-        <div class="box" id="b2">2</div>
+        <div class="box" id="b2" data-createdby="priyank">2</div>
         <div class="box">3</div>
         <div class="box" id="b4">4</div>
     </div>
@@ -25,12 +25,12 @@
     <script>
         // Finding Elements
         
-        // document.getElementById;
-        // document.getElementsByClassName;
-        // document.getElementsByName;
-        // document.getElementsByTagName;
-        // document.querySelector;
-        // document.querySelectorAll;
+        // document.getElementById;        --> returns one element.
+        // document.getElementsByClassName;--> return a live HTMLCollection.
+        // document.getElementsByName;     --> return a live HTMLCollection.
+        // document.getElementsByTagName;  --> return a live HTMLCollection.
+        // document.querySelector;         --> returns the first matching element.(#id, .class, [attribute=value])
+        // document.querySelectorAll;      --> returns a static NodeList 
 
         let boxes = document.getElementsByClassName("box");
         console.log(boxes);
@@ -41,6 +41,7 @@
         document.getElementById("b2").style.backgroundColor = "lime"
 
         document.querySelector("#b4").style.backgroundColor = "blue";
+        // document.querySelector("div#b4").style.backgroundColor = "blue";
         // Only targets first attribute
 
         // console.log(document.querySelectorAll(".box"));
@@ -49,6 +50,10 @@
         // })
 
         console.log(document.getElementById("b2").getAttribute("class"));
+        
+        // document.designMode = "on";
+
+        console.log(document.getElementById("b2").dataset);
     </script>
 </body>
 </html>
