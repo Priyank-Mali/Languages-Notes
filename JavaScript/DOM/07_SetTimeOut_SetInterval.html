@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settimeout and Setinterval in JS</title>
+    <style>
+        .container{
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border: 1px solid black;
+        }
+        .child{
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="child"></div>
+
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    
+
+    <script>
+        let randomColor = () =>{
+            let red = Math.random()*255;
+            let green = Math.random()*255;
+            let blue = Math.random()*255;
+
+            return `rgb(${red},${green},${blue})`
+        }
+        let boxes = document.querySelectorAll(".box")
+        // for (let element of boxes) {
+        //     element.style.backgroundColor = randomColor()
+        // }
+
+        let time = setInterval(() => {
+            for (let element of boxes) {
+            element.style.backgroundColor = randomColor()
+        }
+        // clearInterval(time)
+        }, 500); 
+
+        console.log(time);
+
+        setTimeout(() => {
+            document.querySelector(".child").style.backgroundColor = randomColor()
+        },2000)
+
+    </script>
+</body>
+</html>

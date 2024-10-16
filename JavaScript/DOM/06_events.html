@@ -3,12 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events / SetTimeOut / SetInterval in JS</title>
+    <title>Events in JS</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            padding: 20px;
+            margin: 10px;
+        }
+        .box1{
+            border: 1px solid red;
+            padding: 20px;
+            background-color: yellow;
+        }
+        .child{
+            background-image: linear-gradient(red,yellow,blue);
+            color: transparent;
+            background-clip: text;
+            font-size: 40px;
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
     
+    <div class="box">
+        box 1
+    </div>
+    <button class="btn" id="btn">Click 1</button>
+    <button class="btn" id="btn1">Click 2</button>
+    <button class="btn" id="btn2">Click 3</button>
+
+    <!-- ------ Event Bubbling ----------- -->
+     <div class="container">
+        <div class="box1">
+            <div class="child">
+                I am a Child
+            </div>
+        </div>
+     </div>
+        
+
     <script>
 
+        // change in state of object is called Event
+
+        // ======================================================
+        // events can be handled through HTML attributes
+
+        // <input type="text" name="" id="" onkeypress="alert("Hello World")">
+
+        // =====================================================
+        // or can be handled through onclick property
+
+        let btn2 = document.getElementById("btn2")
+        btn2.onclick = ()=>{
+            alert("Hello world");
+        }
+
+        // ===========================================================================
+        // addEventListener : 
+        // element.addEventListener(event, function, useCapture);
+        //
+
+        // mouse Events -----------------------
+        /*
+            Event       Event Handler
+
+            click           onclick
+            dbclick
+            mouseout
+            mousedown
+            mouseup
+        */
+
+
+        let btn = document.getElementById("btn")
+        btn.addEventListener("click", ()=>{
+            document.body.style.backgroundColor = "black";
+            document.querySelector(".box").innerHTML = "<b style='color: white;'>Hello world</b>"
+        })
+
+        document.getElementById("btn1").addEventListener("contextmenu",()=>{
+            alert("don't use right click")
+        })
+
+        document.addEventListener("keydown",(e)=>{
+            console.log(e);
+            console.log(e.key);
+        })
+
+        // ===========================================
+        // Event Bubbling
+        document.querySelector(".container").addEventListener("contextmenu",()=>{
+            alert("GrandParent");
+        })
+
+        document.querySelector(".box1").addEventListener("contextmenu",()=>{
+            alert("Parent");
+        })
+
+        document.querySelector(".child").addEventListener("contextmenu",(e)=>{
+            alert("Child");
+            console.log(e);
+            e.stopPropagation()
+        })
 
     </script>
 
