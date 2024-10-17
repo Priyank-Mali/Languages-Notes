@@ -1,8 +1,3 @@
-let obj = {
-    name : "priyank",
-    age : 99
-}
+var news = document.createElement("p")
 
-for(let i in obj){
-    console.log(obj[i]);
-} 
+console.log(news);

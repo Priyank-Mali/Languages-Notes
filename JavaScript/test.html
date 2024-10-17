@@ -7,26 +7,20 @@
 </head>
 <body>
   <script>
-    let obj = {
-      name : "priyank",
-      lastname : "mali",
-      address : "surat",
+    let parentDiv = document.createElement("div")
+    parentDiv.setAttribute("style","display: grid; grid-template-columns: repeat(3,1fr);")
+    document.body.append(parentDiv)
+    let n = 1;
+    while(n<10){
+      let newDiv = document.createElement("div");
+      newDiv.innerHTML = n;
+      newDiv.setAttribute("style","width: 100px; height: 100px; border: 1px solid black; background-color: yellow;")
+      parentDiv.appendChild(newDiv);
+      console.log(newDiv)
+      n++;
     }
-
-    // obj.forEach(element => {  
-    //   console.log(element);
-    // });
-
-    for (const key in obj) {
-      if (Object.prototype.hasOwnProperty.call(obj, key)) {
-        console.log(key+"-->"+obj[key]);        
-      }
-    }
-
-    Object.keys(obj).forEach(key => {
-      console.log(obj[key]);
-    });
-
+    console.log(parentDiv)
   </script>
+
 </body>
 </html>
