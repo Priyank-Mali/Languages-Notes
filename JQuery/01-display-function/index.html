@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Function</title>
+    <style>
+        .div1{
+            height: 200px;
+            width: 200px;
+            background-color: red;        
+        }
+        .div2{
+            height: 200px;
+            width: 200px;
+            background-color: yellow;        
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <button id="btn1">Hide</button>
+    <button id="btn2">Show</button>
+    <button id="btn3">Toggle</button>
+
+    <hr>
+    <div class="div1"></div>
+    <div class="div2"></div>
+
+    <script src="../jQuery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $(".div1").hide()
+            })
+        })
+        $(document).ready(function(){
+            $("#btn2").click(function(){
+                $(".div1").show()
+            })
+        })
+        $(document).ready(function(){
+            $("#btn3").click(function(){
+                $(".div1").toggle()
+            })
+        })
+    </script>
+
+</body>
+</html>

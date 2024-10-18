@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Introduction</title>
+</head>
+<body>
+    <!-- Write Less , Do More  
+    
+    jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.
+
+    jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.
+
+    he jQuery library contains the following features:
+
+    HTML/DOM manipulation
+    CSS manipulation
+    HTML event methods
+    Effects and animations
+    AJAX
+    Utilities
+
+    Adding jQuery to web pages
+
+    1.) Download jQuery library from jQuery.com
+    or
+    2.) Include jQuery from CDN 
+
+    $(document).ready(function(){
+        $("selector").eventMethod(function(){
+            $("selector").jQuery_function()
+        })
+    })
+
+    or
+
+    $(function(){
+        $("selector").eventMethod(function(){
+            $("selector").jQuery_function()
+        })
+    })
+
+    -->
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <script src="jQuery.js"></script> 
+
+    <script>
+        $(document).ready(function(){
+            // console.log($("body").html())
+            // console.log($("header").html())
+            $("nav").css("border","1px solid red")
+            $("nav:first").css("backgroundColor","yellow")
+            $("ul").css("fontFamily","verdana")
+            $("ul a:last").css("color","blue") 
+        })   
+    </script>
+    
+</body>
+</html>
