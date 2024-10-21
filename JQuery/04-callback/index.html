@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+    <style>
+        div {
+            height: 150px;
+            width: 150px;
+            background-color: rosybrown;
+        }
+    </style>    
+</head>
+<body>
+    
+    <button id="btn">click</button>
+
+    <hr>
+    <div></div>
+
+    <script src="../jQuery.js"></script>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                $("div").hide(10000,function(){
+                    $("div").show(function(){
+                        alert("Task Completed")
+                    })
+                })
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animate Function</title>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+
+    <script src="../jQuery.js"></script>
+
+    <script>
+        $(function(){
+            $("div").animate({
+                "margin-left" : "300px"
+            },2000,function(){
+                $("div").animate({
+                    "margin-left" : 0
+                },2000)
+            })
+        })
+    </script>
+
+</body>
+</html>

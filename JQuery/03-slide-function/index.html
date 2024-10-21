@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slid Function</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: lime;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">Slid Up</button>
+    <button id="btn2">Slid Down</button>
+    <button id="btn3">Slid Toggle</button>
+
+    <hr>
+
+    <div>
+
+    </div>
+
+    <script src="../jQuery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("div").slideUp();
+            })
+            $("#btn2").click(function(){
+                $("div").slideDown();
+            })
+            $("#btn3").click(function(){
+                $("div").slideToggle();
+            })
+        })
+    </script>
+</body>
+</html>

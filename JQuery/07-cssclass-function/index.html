@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssClass Function</title>
+    <style>
+        .newClass{
+            background-color: lime;
+        }
+        .he{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn1">Add Class</button>
+    <button id="btn2">Remove Class</button>
+    <button id="btn3">Toggle Class</button>
+    <button id="btn4">Has Class</button>
+    <hr>
+    <div class="he">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati iure quisquam ab error. Debitis officia numquam voluptates voluptas nisi maxime repellendus sed harum nemo, consectetur doloribus? Soluta pariatur non corporis.
+    </div>
+
+    <script src="../jQuery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("div").addClass("newClass");
+            })
+            $("#btn2").click(function(){
+                // $("div").removeClass();
+                $("div").removeClass("newClass");
+            })
+            $("#btn3").click(function(){
+                $("div").toggleClass("newClass");
+            })
+            $("#btn4").click(function(){
+                alert($("div").hasClass("newClass"))
+            })
+        })
+    </script>
+</body>
+</html>

@@ -3,49 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Display Function</title>
+    <title>Document</title>
     <style>
-        .div1{
+        div{
+            background-color: yellow;
             height: 200px;
-            width: 200px;
-            background-color: red;        
+            width: 300px;
+            border: 1px solid black;
         }
-        .div2{
-            height: 200px;
-            width: 200px;
-            background-color: yellow;        
-        }
-        
     </style>
 </head>
 <body>
-    
     <button id="btn1">Hide</button>
     <button id="btn2">Show</button>
     <button id="btn3">Toggle</button>
-
     <hr>
-    <div class="div1"></div>
-    <div class="div2"></div>
 
-    <script src="../jQuery.js"></script>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, cum, quae itaque modi facilis nemo accusamus nam, reprehenderit qui omnis neque sunt quidem recusandae mollitia illum quod quas placeat voluptate!
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
             $("#btn1").on("click",function(){
                 $("div").hide();
             })
-        })
-        $(document).ready(function(){
             $("#btn2").click(function(){
-                $(".div1").show()
+                $("div").show();
             })
-        })
-        $(document).ready(function(){
             $("#btn3").click(function(){
-                $(".div1").toggle()
+                $("div").toggle();
             })
         })
     </script>
-
 </body>
 </html>

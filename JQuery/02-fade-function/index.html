@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FadeIn / Fadeout / FadeToggle / FadeTo</title>
+    <style>
+        div{
+            background-color: yellow;
+            height: 200px;
+            width: 300px;
+            border: 1px solid black;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn1">FadeIn</button>
+    <button id="btn2">FadeOut</button>
+    <button id="btn3">FadeToggle</button>
+    <button id="btn4">FadeTo</button>
+
+    <hr>
+
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit atque incidunt odit a ea quibusdam inventore impedit provident ex quisquam rem, modi laudantium consequatur sint unde, debitis delectus voluptas voluptate?
+    </div>
+
+    <script src="../jQuery.js"></script>
+
+    <script>
+        $(function(){
+            $("#btn1").click(function(){
+                $("div").fadeIn(2000);
+            })
+            $("#btn2").click(function(){
+                $("div").fadeOut();
+            })
+            $("#btn3").click(function(){
+                $("div").fadeToggle(3000);
+            })
+        })
+    </script>
+</body>
+</html>
