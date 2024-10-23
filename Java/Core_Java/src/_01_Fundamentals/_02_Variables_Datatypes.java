@@ -3,13 +3,14 @@ package _01_Fundamentals;
 public class _02_Variables_Datatypes {
 	public static void main(String[] args) {
 		
-		// Variables: Variables are containers for storing data values.
+		// Variables: Variables are containers for storing data values. ==================================
 		/*
 		 * int
 		 * String
-		 * float
-		 * char
-		 * boolean
+		 * float    float num = 12.3f
+		 * double   double num = 23.56d
+		 * char 
+		 * boolean  boolean isValue = false 
 		 * 
 		 * */
 		int number = 10;
@@ -28,9 +29,11 @@ public class _02_Variables_Datatypes {
 		System.out.println(myNum);
 		
 		char myChar = '1';
+		char jhas = 65;
+		System.out.println(jhas);
 		System.out.println(myChar);
 		
-		// Identifiers:
+		// Identifiers: =================================================================================
 		// all java variables must be identified by unique names these name called as identifiers
 		
 		
@@ -45,6 +48,37 @@ public class _02_Variables_Datatypes {
 		System.out.println("Age : "+ studentAge);
 		System.out.println("Fees : "+ studentFees);
 		System.out.println("Grade : "+ studentGrade);
+		
+		// non-premitive datatype ==============================================================
+		
+		// String
+		// Arrays
+		// Classes
+		
+		
+		// Type Casting ======================================================================== 
+		
+		/*
+		 * In java there are two types of casting
+		 * 
+		 * 1.) Widening Casting (implicit - automatically)  converting a smaller type to a larger type size
+		 * 		
+		 * 		byte -> short -> char -> int -> long -> float -> double
+		 * 
+		 * 2.) Narrowing Casting (explicit - manually)   converting a larger type to a smaller size type
+		 * 
+		 * 		double -> float -> long -> int -> char -> short -> byte
+		 * 
+
+		 */
+		int a = 12;
+		double b = a;
+		
+		System.out.println(b);
+		
+		double c = 12.3d;
+		int d = (int) c;
+		System.out.println(d);
 		
 	}
 }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        input{
+            outline: none;
+            border: none;
+        }
+        li{
+            list-style: "🚦";
+            padding: 10px;
+        }
+        li button{
+            background-color: transparent;
+            border: none;
+            padding: 10px;
+            margin-left: 20px;
+        }
+        .main{
+            /* border: 1px solid black; */
+            background: linear-gradient(150deg,green,yellow);
+            width: 30%;
+            margin: 100px auto;
+            display: grid;
+            place-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Todo List</h1>
+        <div>
+            <input type="text" name="" id="task">
+            <button id="btn">ADD TASK</button>
+        </div>
+
+        <ul id="todo-list">
+            
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click",()=>{
+            let task = document.getElementById("task");
+            if(task.value == ""){
+                alert("Add Some Task");
+            }else{
+                let list = document.createElement("li");
+                let button = document.createElement("button");
+                let cross = document.createTextNode("❎")
+                button.appendChild(cross); 
+                
+                list.appendChild(document.createTextNode(task.value));
+                list.appendChild(button);     
+
+                document.getElementById("todo-list").appendChild(list);
+                task.value = ""
+
+                button.addEventListener("click",()=>{
+                    document.getElementById("todo-list").removeChild(list); 
+                })
+            }
+
+        })
+    </script>
+</body>
+</html>
