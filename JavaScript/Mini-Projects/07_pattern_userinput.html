@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #show{
+            border: 1px solid black;
+            width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <h1>User Input Pattern</h1>
+
+    <input type="text" name="" id="number">
+
+    <button id="btn">Submit</button>
+
+    <hr>
+    <div id="show">
+        
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click",()=>{
+            let number = document.getElementById("number");
+            if(number.value){
+                document.getElementById("show").innerHTML = "" ;
+                for(let i=0;i<number.value;i++){
+                    let p = document.createElement("p");
+                    for(let j=0;j<=i;j++){
+                        p.innerText = p.innerText +  " *";
+                        document.getElementById("show").appendChild(p);
+                    }
+                }
+                number.value = "";   
+            }
+        })
+
+    </script>
+</body>
+</html>

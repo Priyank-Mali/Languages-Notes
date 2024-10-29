@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd Even Number</title>
+    <style>
+        #error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <input type="text" name="" id="number">
+        <button id="btn">Submit</button>
+
+        <hr>
+
+        <p id="error"></p>
+        <p id="answer"></p>
+
+    </div>
+
+    <script>
+
+        document.getElementById("btn").onclick = ()=>{
+            let number = document.getElementById("number");
+
+            let regex = /[a-zA-Z]/
+            if (regex.test(number.value)){
+                document.getElementById("error").innerText = "Invalid Input Enter Only Numbers"
+            } else {
+                document.getElementById("error").innerText = ""
+                document.getElementById("answer").innerText = ""
+                if (number.value%2 == 0){
+                    document.getElementById("answer").innerText = `${number.value} is Even Number`;
+                } else{
+                    document.getElementById("answer").innerText = `${number.value} is Odd Number`;
+                }
+            }
+            number.value = ""
+        }
+    </script>
+</body>
+</html>

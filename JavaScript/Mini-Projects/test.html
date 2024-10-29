@@ -1,67 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
-        .container .maincontent{
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 10px;
+        }
+        
+        /* ===================================== */
+        header {
+            background-color: darkblue;
+        }
+        
+        header .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+            gap: 10px
+        }
+        
+        header .navbar .logo {
+            flex: 0.5;
+        }
+        
+        header .navbar .logo img {
+            max-width: 100%;
+        }
+        
+        header .navbar .nav {
+            flex: 2;
+        }
+        
+        header .navbar .nav ul {
             display: flex;
             gap: 20px;
-            /* max-width: 600px; */
-            margin: 10px;
-
-        }
-        .container .maincontent .thumbnail{
-            width: 200px;
         }
         
-        .container .maincontent .thumbnail img{
-            width: 100%;
-            vertical-align: middle;
-            border-radius: 10px;
-
+        header .navbar .nav ul li {
+            padding: 5px;
         }
+        
+        header .navbar .nav ul li a {
+            color: white;
+        }
+        
+        header .navbar .search {
+            flex: 0.2;
+            display: flex;
+            justify-content: end;
+            color: white;
+        }
+        
+        header .navbar .menu {
+            display: none;
+        }
+        
+        header .navbar .menu button {
+            height: 30px;
+            width: 30px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        /* ============== for responsive design on media query ================= */
+        header .navbar .nav-show {
+            display: block !important;
+            background-color: black;
+            position: absolute;
+            top: 55px;
+            left: 0;
+            right: 0;
+        }
+        
+        header .navbar .nav-show ul {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            text-align: center;
+            padding: 10px;
+        }
+        
+        /* ====================================================*/
+        @media (max-width:576px) {
+            header .navbar .nav {
+                display: none;
+            }
+        
+            header .navbar .menu {
+                display: block;
+            }
+        }
+        
+        /* ======================= for design layout ======================== */
+        .navslide {
+            background-color: black;
+            position: fixed;
+            width: 100%;
+            /* top: 0; */
+            right: -500px;
+            transition: 1s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        
+        .navslide ul {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding: 10px;
+        }
+        
+        .navslide ul a {
+            color: white;
+        }
+        
+        .navslideShow {
+            right: 0;
+        }
+
     </style>
 </head>
+
 <body>
-    <div class="container">
-        
+    <script src="script.js"></script>
+
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://www.tcs.com/content/dam/global-tcs/en/images/home/tcs-logo-1.svg" alt="">
+                </div>
+                <div class="nav" id="nav">
+                    <ul>
+                        <li><a href="">What we do</a></li>
+                        <li><a href="">Who we are</a></li>
+                        <li><a href="">Insights</a></li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <i class="fa-solid fa-search"></i>
+                </div>
+                <div class="menu">
+                    <!-- <button onclick="showMenu('nav')">
+                        <i class="fa-solid fa-bars"></i>
+                    </button> -->
+                    <button onclick="showMenu('navSlide')">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="navslide" id="navSlide">
+        <ul>
+            <li><a href="">What we do</a></li>
+            <li><a href="">Who we are</a></li>
+            <li><a href="">Insights</a></li>
+        </ul>
     </div>
 
     <script>
+        // const showMenu = (cls) => {
+        //     let myclass = document.getElementById(cls)
+        //     myclass.classList.toggle("nav-show")
+        // }
 
-        let cardGenerator = (image,title,name,views,duration)=>{
-            let newViews = ""
-            if (views>0 && views<1000){
-                newViews = views ;
-            } else if (views>1000 && views<1000000){
-
-                newViews = Math.floor(views/1000) + "K"
-            }else{
-                newViews = Math.floor(views/1000000) + "M"
-            }
-            let myHtml = `
-                <div class="maincontent">
-                    <div class="thumbnail">
-                        <img src="${image}" alt="">
-                    </div>
-                    <div class="content">
-                        <h2>
-                            ${title} 
-                        </h2>
-                        <p>${name} . ${newViews} view . ${duration}</p>
-                    </div>
-                </div>
-            `
-            document.getElementsByClassName("container")[0].innerHTML += myHtml
-        } 
-        
-        cardGenerator("https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB0alxLSXCSEPITzWr-XXUiv1oglQ","Sigma Web Development Course - Web Development Tutorials in Hindi 🗿" , "CodeWithHarry" , 3 , "3 year ago")
-        cardGenerator("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg","Sigma Web Development Course - Web Development Tutorials in Hindi 🗿" , "CodeWithHarry" , 3 , "3 year ago")
-        cardGenerator("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg","Sigma Web Development Course - Web Development Tutorials in Hindi 🗿" , "CodeWithHarry" , 34567 , "3 year ago")
-        cardGenerator("https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg","Sigma Web Development Course - Web Development Tutorials in Hindi 🗿" , "CodeWithHarry" , 3034000 , "3 year ago")
-            
+        const showMenu = (cls) => {
+            let myclass = document.getElementById(cls)
+            myclass.classList.toggle("navslideShow")
+        }
     </script>
 </body>
+
 </html>
