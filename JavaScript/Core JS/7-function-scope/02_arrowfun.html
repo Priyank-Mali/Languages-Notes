@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    
+    <script>
+
+        /**
+         * function with no arguments and no return ==================================
+         */
+        let fun = () => console.log("hello world");
+        fun()
+
+        /**
+         * function with parameters and return =======================================
+         */
+        let sum = (a,b) => a+b
+        console.log(sum(10,9))
+
+        /**
+         * function with parameter , multiple lines of function body =================
+         */
+        let process = (a,b) => {
+            console.log("inside fun");
+            return a*b;
+        }
+        console.log(process(2,3));
+
+
+
+        /**
+         * function with no name is called ==> Anonymous function =====================
+         *  (IIFE) ==> immediately-invoked function expression
+         *  means immediately call function after its defination
+         */
+
+         (function(){
+            console.log("priyank mali");
+         })()
+
+    </script>
+
+</body>
+</html>

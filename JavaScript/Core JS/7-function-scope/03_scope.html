@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope in JS</title>
+</head>
+<body>
+    
+    <script>
+
+        // Global Scope ============================
+
+        var name = "priyank"
+        console.log(name);
+        
+
+        // Local Scope / function scope  ===============
+
+        function hello(){
+            let name2 = "priyank";
+            console.log(name);
+        }
+        hello()
+        // console.log(name2); // referenceError : name2 is not defined
+        
+
+
+        // Block Scope 
+
+        {
+            // var x = 10; // not block scope
+            let x = 10; // block scope
+            console.log(x);
+        }
+        console.log(x);
+        
+
+    </script>
+
+</body>
+</html>

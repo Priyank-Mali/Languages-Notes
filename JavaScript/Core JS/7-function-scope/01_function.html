@@ -25,12 +25,11 @@
          * Special feature
         */
 
-        function fun(){
-            console.log(arguments);
-        }
+       function special(){
+        return arguments      // arguments object (to know which arguments pass in function)
+       }
 
-        fun(1,2,3,4);
-        fun(12,"priyank",89);
+       console.log(special(1,'mali',3,4,"priyank"));
 
         // function with return value
 
@@ -43,6 +42,8 @@
         console.log(x);
 
         window.document.write("Hello ");
+
+        
 
     </script>
 </body>
