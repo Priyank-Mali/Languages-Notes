@@ -26,16 +26,55 @@
         
 
 
-        // Block Scope 
+        // Block Scope  =================================
 
         {
-            // var x = 10; // not block scope
-            let x = 10; // block scope
+            var x = 10; // not block scope
+            // let x = 10; // block scope
             console.log(x);
         }
         console.log(x);
-        
 
+
+        // let - var - const =====================================================
+
+        /**
+         * var:  ---------------------------------------------------------
+         * 1. It's used to define a variable
+         * 2. It has function scope but no block scope
+         * 3. It is hoisted
+         */
+        function f1(){
+            var  i = 5
+            console.log(i)
+        }
+        f1()
+        // console.log(i)
+
+        console.log(j); // output : not defined
+        var j = 10;     // called as hoisted
+        // "hoisting" refers to the behavior where variable and function declarations 
+        //are moved to the top of their containing scope during the compilation phase, 
+        //before the code is executed. 
+        
+        // simple --> hoisting means after code we difined i = 34 compiler uper jase kese i 6e ahiya
+        // thats why output : undefined ---> (not giving error)
+
+
+        /**
+         * Let: -----------------------------------------------------------
+         * 1. No hoisting
+         * 2. It has block scope
+         */
+        // console.log(k)
+        // let k=90  // error :  Cannot access 'k' before initialization
+                    // not hoisting 
+
+
+        // const country = "INDIA" ---------------------------------------
+        // country = "Africa"
+        
+                        
     </script>
 
 </body>

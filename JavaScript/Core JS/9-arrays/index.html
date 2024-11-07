@@ -13,14 +13,14 @@
         // index : value 
 
         // let num = [1, 2, 3];
-        // console.log(typeof num); // object
+        // console.log(typeof num); // object :  it is (index: value) -> not(key: value)
         // console.log(num.length);
 
         // var a = [10,20,30]
 
-        var a = new Array(); // constructor method
-        // a[0] = 10
-        // a[1] = 20
+        var W = new Array(); // constructor method
+        // W[0] = 10
+        // W[1] = 20
         // .....
 
 
@@ -55,7 +55,7 @@
         for (let i=0;i<arr.length;i++){
             document.write(`<tr>`);
             for(let j=0;j<arr[i].length;j++){
-                document.write(`<td>${arr[i][j]}</td>`)
+                document.write(`<td style="padding: 20px;">${arr[i][j]}</td>`)
             }
             document.write(`</tr>`)
         }
@@ -183,7 +183,6 @@
                 console.log(e);
             });
         });
-
 
 
         // copy
