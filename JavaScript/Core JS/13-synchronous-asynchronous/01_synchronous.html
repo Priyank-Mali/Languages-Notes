@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchronous Code Execution</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+
+        problem 
+            s1 => s2 => s3 => s4 ..
+
+            (this is blocking processing)
+
+            1. In synchronous code execution, statements are executed sequentially, one after the other, in the order they appear in the code.
+
+            2. Each statement must wait for the previous one to finish before it can execute.
+            
+            3. Synchronous code blocks the execution thread until it completes, meaning that other tasks cannot be performed until the current task finishes.
+
+            callstack ==> FIFO (fist in first out)
+        */
+
+        console.log("first line")
+
+        function hello(){
+            console.log("function line")
+        }
+
+        hello()
+        
+        console.log("second line")
+
+    </script>
+
+</body>
+</html>

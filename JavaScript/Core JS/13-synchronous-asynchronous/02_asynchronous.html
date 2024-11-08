@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Code Execution</title>
+</head>
+<body>
+    
+    <script>
+
+        /*
+            1. In asynchronous code execution, statements can be executed in a non-blocking manner.
+            This means that statements can be initiated and allowed to run in the background while other code continues to execute.
+   
+            2. Asynchronous operations do not block the execution thread, allowing other tasks to be performed concurrently.
+        
+            3. Asynchronous operations typically involve  :
+            callbacks, 
+            promises, or 
+            async/await syntax 
+            
+            to handle the result of the operation once it completes.
+        */
+
+        console.log("first line")
+
+        // setTimeout(callbackFn,time)
+        
+        setTimeout(()=>{
+            console.log("function call")
+        },3000)
+
+        console.log("second line")
+
+    </script>
+
+</body>
+</html>
