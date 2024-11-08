@@ -6,20 +6,20 @@
   <title>Document</title>
 </head>
 <body>
+
   <script>
-    let parentDiv = document.createElement("div")
-    parentDiv.setAttribute("style","display: grid; grid-template-columns: repeat(3,1fr);")
-    document.body.append(parentDiv)
-    let n = 1;
-    while(n<10){
-      let newDiv = document.createElement("div");
-      newDiv.innerHTML = n;
-      newDiv.setAttribute("style","width: 100px; height: 100px; border: 1px solid black; background-color: yellow;")
-      parentDiv.appendChild(newDiv);
-      console.log(newDiv)
-      n++;
+
+
+    function employee(name,id,age){
+      this.name = name,
+      this.id = id,
+      this.age = age
     }
-    console.log(parentDiv)
+    obj1 = new employee("priiyank",99,98)
+
+    console.log(obj1.age);
+    
+
   </script>
 
 </body>

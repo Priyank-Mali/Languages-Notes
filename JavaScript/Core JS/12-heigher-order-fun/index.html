@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Function</title>
+</head>
+<body>
+    
+    <script>
+
+        //  higher-order functions are functions that either take other functions as arguments, return functions, or do both. 
+
+        // Common Higher-Order Functions
+
+        // 1. map()  creation of new transformed array ----------------------------
+
+            let arr = [2,3,4,5]
+            let new_arr = arr.map(element => element ** 3 )
+            console.log(new_arr)
+
+
+        // 2. filter() -------------------------------------------------------------
+
+            let arr1 = [2,3,4,5,6,7,8,9,10]
+            // let new_arr1 = arr1.filter(num => num%2 == 0)
+            let new_arr1 = arr1.filter((number)=>{
+                if(number %2 == 0){
+                    return number
+                }
+            })
+            console.log(new_arr1)
+
+
+        // 3. reduce() --------------------------------------------------------------
+            
+            let arr2 = [1,2,3,4,5,6,7,8,9,10]
+            let sum = arr2.reduce((current,next)=>current+next)
+            console.log(sum)
+
+        // forEach() -----------------------------------------------------------------
+
+        let players = ["sachin","virat","rohit","dhoni"]
+
+        players.forEach(element=>console.log(element))
+
+        // create Own Higher-Order Function ------------------------------------------
+
+        function Operation(otherFn,a,b){
+
+            return otherFn(a,b) 
+        }
+
+        function add(a,b){
+            return a+b
+        }
+
+        console.log(Operation(add,11,4))
+
+        function OuterFn(otherFn,a,b){
+            
+            return otherFn(a,b)
+        }
+
+        function multiply(a,b){
+                return a*b
+            }
+        console.log(OuterFn(multiply,5,8))
+
+    </script>
+
+</body>
+</html>

@@ -49,6 +49,37 @@
         }
 
         // console.log(obj);
+        
+        console.log(obj.age)
+        console.log(obj["name"])
+
+        // adding data ----------------
+        obj.country = "india"
+        console.log(obj.country);
+        obj["continent"] = "asia"
+
+        // deleting object 
+        delete obj.name
+        console.log(obj)
+
+        for(let key in obj){
+            console.log(key + "-->" + obj[key])
+        }
+
+        console.log(Object.keys(obj))
+        console.log(Object.values(obj));
+        console.log(Object.entries(obj)); // get both keys and values
+        
+        // cloning an object using assign
+
+        let new_obj = Object.assign({},obj)
+        console.log(new_obj)
+
+        // clonnig and adding
+        
+        let new_obj1 = Object.assign({},obj,{role : "developer"})
+        console.log(new_obj1)
+        
 
         for (const key in obj) {
             if (Object.prototype.hasOwnProperty.call(obj, key)) {

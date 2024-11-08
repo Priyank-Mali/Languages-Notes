@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    
+    <script>
+
+        // suppose we have data either in form of array or object --> now we want 
+        // what we do is :
+        // takeout data and assign to variable by iterate and assign
+        // this is time consuming process
+
+        // Destructuring
+        // fetching values out of array and object and assign to variables
+
+        /**
+         * destructuring array
+        */
+
+        const num = [99,88,77]
+
+        const [a,b,c] = num // [1,2,3]
+        // const [a,b,c,d] = num // [1,2,3]
+
+        console.log(a);
+        console.log(c);
+        // console.log(d);
+
+        /**
+         * destructuring object
+        */
+
+        const per = {
+            name: "priyank",
+            age: 88,
+            city: "banglore",
+            address : {
+                flatno : 99,
+                pincode : 11111
+            }
+        }
+
+        // in case of object destructuring variables should match with keys of object
+        
+        const {name,age,hobby,address : {flatno , pincode}} = per
+        console.log(name);
+        console.log(age);
+        console.log(hobby); // undefined
+        // console.log(address);
+        console.log(flatno);
+
+    </script>
+
+</body>
+</html>

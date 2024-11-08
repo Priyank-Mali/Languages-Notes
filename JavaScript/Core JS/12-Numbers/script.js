@@ -22,3 +22,5 @@ console.log(y);
 let z = parseInt("23 45");
 console.log(z)
 
+let c = Math.round(Math.random()*10)
+console.log(c)
