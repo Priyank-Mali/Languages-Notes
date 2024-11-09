@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    
+    <script>
+
+        // callback ==> function ==> passed as a argument to another fn
+
+        function greet(name,callback){
+            let greeting = "Hello " + name
+            callback(greeting)
+        }
+
+        function displayGreeting(msg){
+            console.log(msg)
+        }
+
+        greet("priyank",displayGreeting)
+
+        // ===========================================================
+
+        const loadScript = (src,callback) => {
+            let sc = document.createElement("script")
+            sc.src = src
+            sc.onload = callback("priyank")
+            document.head.append(sc)
+        }   
+        const callback = (msg) => {
+            console.log(msg)
+        }
+
+        loadScript("https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js",callback)
+
+
+
+        //=============================================
+
+        // when we have callback inside callback , the code gets dificult to manage
+         
+        // callback hell || Pyramid of doom
+
+        // getUser(function(user){
+        //     getPosts(user.id,function(post){
+        //         displayUserInfo(user,posts,function(){
+        //             console.log("User ifo and posts successfully displayed");
+        //         })
+        //     })
+        // })
+
+    </script>
+
+</body>
+</html>

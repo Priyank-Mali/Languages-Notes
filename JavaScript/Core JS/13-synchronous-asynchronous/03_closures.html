@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    
+    <script>
+
+        function hello(){
+            let name = "priyank"
+            console.log(name);
+        }
+        hello()
+        // console.log(name);
+
+        /**
+         * name : is in function(local variable) -> throws error
+         * but we use name outside the function -> then concept called as closures
+         * 
+         * benefits:
+         * 1.) Encapsulation
+         * 2.) Data privacy / Data hiding
+         * 
+        */
+
+        function outerFn(){
+            let outerVar = "I am from the outer fun"
+            function innerFn(){
+                console.log(outerVar)
+            }
+            return innerFn
+        }
+
+        let fn = outerFn()
+        fn() // i will able to hold the local variable of outer fn ==> closures
+        
+        // example
+
+        function customerCount(){
+            let count = 0
+            return function(){
+                count++
+                console.log("New Customer Come: ",count)
+            }
+        }
+
+        let counter = customerCount()
+        counter()
+        counter()
+        counter()
+
+    </script>
+
+</body>
+</html>
