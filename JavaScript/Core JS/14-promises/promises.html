@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <script>
+
+        // simran promises
+
+        const simranPromise = new Promise((resolve,reject)=>{ // create a new promise object
+            // promise has two outcome : --> this is callback function 
+
+            let parentDecision = false
+
+            if (parentDecision){
+                resolve("Yahh, ab shadi ki tyari karo")
+            } else {
+                reject("papa ne IAS dhundh liya hai,Sorry.....")
+            }
+        })
+
+        // now action on the promises
+
+        simranPromise.then((msg)=>{                 // positive outcome   => through function
+            console.log("simran message : ",msg)
+            console.log("let's book the wedding venue")
+        }).catch((msg)=>{                          // negetive outcome
+            console.log("simran message : ",msg)
+            console.log("Chalo kota IAS ki tayari karne....")
+        }).finally(()=>console.log("chalo life me clearity mili.")) // finally => call every time
+
+        // conclusion
+
+        // promise object      --> resolve     -->   complition status
+        //  (pending status)   --> reject 
+        //                    ( execution status)
+
+
+    </script>
+</body>
+</html>
