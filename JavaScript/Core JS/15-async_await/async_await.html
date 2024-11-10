@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+<body>
+    
+    <script>
+
+        // syntacticall sugar of promises
+
+        // async function greeting(){
+        //     return "Good Morning"
+        // }
+
+        // // console.log(greeting())
+        // greeting().then((msg)=>console.log(msg))
+
+        // ====================================================================
+
+        // async await
+
+        console.log("Hello from the begining")
+
+        // this entire function becomes asynchronous (means non blocking manner) => don't wait for other
+        async function printHelloAfterWait(){
+
+            console.log("first line")
+
+            let data = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("settime call")
+                },3000)
+            })
+
+            // await waits for the promise to complete
+            let result = await data // start waiting for the data promise to be completed
+            console.log(result)
+
+            console.log("Second line")
+        }
+
+        printHelloAfterWait()
+
+        console.log("Hello from the Ending")
+
+    </script>
+</body>
+</html>

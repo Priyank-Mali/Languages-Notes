@@ -39,6 +39,114 @@
         //                    ( execution status)
 
 
+        // ====================================================================
+
+        const f1Promise = new Promise((resolve,reject)=>{
+
+            setTimeout(()=>{
+                if(Math.random() >0.2){
+                    resolve("Friend1 : Hey I am in for GOA")
+                } else {
+                    reject("Friend1 : sorry mere pet me dard hai...")
+                }
+            },3000)
+
+        })
+
+        const f2Promise = new Promise((resolve,reject)=>{
+            
+            setTimeout(()=>{
+                if(Math.random() > 0.4){
+                    resolve("Friend2 : Hey I am in for GOA")
+                } else {
+                    reject("Friend2 : sorry nani mar gai...")
+                }
+            },3000)
+        })
+
+
+        const f3Promise = new Promise((resolve,reject)=>{
+            
+            setTimeout(()=>{
+                if(Math.random() > 0.3){
+                    resolve("Friend3 : Hey I am in for GOA")
+                } else {
+                    reject("Friend3 : sorry papa nay manenge...")
+                }
+            },3000)
+        })
+
+        // If any one of them rejects, Promise.all will immediately reject with that message.
+
+        Promise.all([f1Promise,f2Promise,f3Promise]).then((msg)=>{
+            console.log("All friends are in for GOA!");
+            console.log(msg)
+        }).catch((msg)=>{
+            console.log("One or more friends backed out:");
+            console.log(msg)
+        })
+
+        // ======================================================================================
+
+        const gf1Promise = new Promise((resolve,reject)=>{
+
+            setTimeout(()=>{
+                if(Math.random() > 0.9){
+                    resolve("gf1 : hey i'll come for dinner")
+                } else {
+                    reject("gf1 : phone is unreachable")
+                }
+            },2000)
+        })
+
+
+        const gf2Promise = new Promise((resolve,reject)=>{
+
+            setTimeout(()=>{
+                if(Math.random() > 0.9){
+                    resolve("gf2 : hey i'll come for dinner")
+                } else {
+                    reject("gf2 : i am on diet")
+                }
+            },2000)
+        })
+        
+
+        const gf3Promise = new Promise((resolve,reject)=>{
+
+            setTimeout(()=>{
+                if(Math.random() > 0.9){
+                    resolve("gf3 : hey i'll come for dinner")
+                } else {
+                    reject("gf3 : i am going with someone else ..")
+                }
+            },2000)
+        })
+
+        
+        // Promise.any([gf1Promise,gf2Promise,gf3Promise]).then((msg)=>{
+        //     console.log(msg)
+        //     console.log("my valentine day is shorted")
+        // }).catch((msg)=>{
+        //     console.log(msg)
+        //     console.log("how to be a part of bajarangdal ?")
+        // })
+
+        /* if all promises are rejected, it throws an AggregateError instead of a single rejection message. 
+         AggregateError is an object that contains all the rejection errors from the promises.
+        */
+
+        Promise.any([gf1Promise,gf2Promise,gf3Promise]).then((msg)=>{
+            console.log(msg)
+            console.log("my valentine day is shorted")
+        }).catch((msg)=>{
+            if(msg instanceof AggregateError){
+                console.log("All rejected")
+                msg.errors.forEach((errMsg) => console.log(errMsg));
+            }
+            console.log("how to be a part of bajarangdal ?")
+        })
+
     </script>
 </body>
 </html>

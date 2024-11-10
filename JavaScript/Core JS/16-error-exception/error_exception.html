@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error & Exception Handling</title>
+</head>
+<body>
+    
+    <script>
+
+        // Errors are issues in code that stop execution.
+        // Not automatically handled
+        // SyntaxError, ReferenceError, TypeError
+
+        // console.log("hello"       
+
+        //Exceptions are errors that can be caught and handled to avoid crashing the program.
+        // Can be caught and handled with try...catch
+
+        let num = 4
+
+        for(let i=-3;i<5;i++){
+            console.log(num/i)
+        }
+
+        try{
+            let obj = undefined
+            console.log(obj.name)
+        } catch(error) {
+            // console.log(error)
+            console.log("Exception Handled")
+        } finally {
+            console.log("i will always execute")
+        }
+
+
+
+
+    </script>
+</body>
+</html>
