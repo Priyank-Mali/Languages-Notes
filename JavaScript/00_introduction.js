@@ -1,7 +1,9 @@
 /**
  * 
- * 
+  https://tc39.es/ecma262/2023/multipage/#sec-intro
+  
 -> JavaScript is the most popular scripting language for the Web.
+-> invented by Brendan Eich at Netscape and first appeared in that company's Navigator 2.0 browser
 -> It is easy to learn, lightweight, cross-platform, single-threaded, and interpreted compiled language. 
 -> It is widely used for web development, both on the client side and server side. 
 -> As a scripting language, it plays an important role in web browsers, allowing real-time 

@@ -11,11 +11,14 @@
         // Javascript variables can be declared in 4 ways:
         
         // Automatically
+        
         // var    : can be re-declared & updated.A global scope variable.
+
         // let    : cannot be re-declared but can be updated.A block scope variable.
+        
         // const  : cannot be re-declared or updated.A block scope variable.
 
-        // "use strict"
+        // "use strict" // expression
         // n = 4;  // error --> n is not defind
         // console.log(n);
 
@@ -61,6 +64,13 @@
         console.log(typeof b)
         console.log(b + 1);
         console.log(b - 1);
+
+        let myname = "priyank"
+        let booleanname = Boolean(myname)
+        console.log(booleanname) // true
+
+        // 1 => true     0 => false
+        // "" => false   "name" => true
 
         let c = 10.12;
         console.log(parseInt(c));
