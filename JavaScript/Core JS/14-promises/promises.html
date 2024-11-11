@@ -10,7 +10,14 @@
 
         // solution of callback hell => promises
         // a promises is a "promise of code execution" => the code either executes or fails
+        // Promises help us manage asynchronous operations (like fetching data from a server) in a cleaner way
         
+        // States of a Promise:
+
+        // ending: The initial state; the operation is ongoing.
+        // Fulfilled: The operation completed successfully, and the promise has a result.
+        // Rejected: The operation failed, and the promise has an error.
+
         // syntax : 
 
         /*
@@ -31,6 +38,23 @@
                 // code
             })
         */
+
+        let orderPizza = new Promise((resolve, reject) => {
+            let pizzaArrived = true; // Try setting this to false to see how reject works
+
+            if (pizzaArrived) {
+                resolve("Pizza is here!");
+            } else {
+                reject("Pizza delivery failed.");
+            }
+        });
+
+        orderPizza.then((message) => {
+            console.log(message); // Output: "Pizza is here!"
+        }).catch((error) => {
+            console.log(error); // If pizzaArrived was false: "Pizza delivery failed."
+        });
+
 
         // simran promises
 

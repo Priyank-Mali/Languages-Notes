@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hacking Simulator</title>
+
+    <style>
+      h3 {
+        color: greenyellow;
+      }
+      p {
+        background-color: greenyellow;
+        width: 20px;
+        height: 20px;
+        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        animation-name: dots;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function:  cubic-bezier(0.86, 0, 0.07, 1);
+        
+        border-radius: 50%;
+      }
+
+      @keyframes dots {
+        0% {
+          background-color: greenyellow;
+        }
+
+        100% {
+          background-color: black;
+        }
+      }
+
+      #p2 {
+        animation-delay: 0.5s;
+      }
+      #p3 {
+        animation-delay: 1s;
+      }
+      div {
+        display: flex;
+        gap: 10px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+    </div>
+
+
+    <script>
+        
+        document.body.style.backgroundColor = "black";
+
+        const messages = [
+            "Initializing Hacking ...",
+            "Reading Your Files ...",
+            "Password Files Detected ...",
+            "Sending All Password and Files to server ...",
+            "Cleaning Up ..."
+        ]
+
+        // messages.forEach((msg,index) => {
+        //     let h3 = document.createElement("h3")
+        //     h3.innerText = msg
+            
+            
+        //     setTimeout(() => {
+        //         document.body.append(h3)
+        //         h3.style.opacity = 1
+        //     }, index*4000);
+        // });
+
+        async function hecking(){
+            
+
+        }
+
+
+    </script>
+
+
+  </body>
+</html>
