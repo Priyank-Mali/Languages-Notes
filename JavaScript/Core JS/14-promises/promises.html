@@ -8,6 +8,30 @@
 <body>
     <script>
 
+        // solution of callback hell => promises
+        // a promises is a "promise of code execution" => the code either executes or fails
+        
+        // syntax : 
+
+        /*
+            let promise = new Promise(function(resolve,reject){
+                // code 
+            })
+
+            resolve and reject are two callback function
+
+            resolve(value) => if success
+            reject(error)  => if fail
+
+            promise.then(function(result){
+                // code
+            }).catch(function(error){
+                // code    
+            }).finally(function(){
+                // code
+            })
+        */
+
         // simran promises
 
         const simranPromise = new Promise((resolve,reject)=>{ // create a new promise object
