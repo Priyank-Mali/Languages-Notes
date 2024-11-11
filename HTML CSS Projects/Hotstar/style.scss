@@ -1,4 +1,4 @@
-$base-white: white;
+$base-white: #ffffff;
 $base-border-color: black;
 
 *{
@@ -9,8 +9,190 @@ $base-border-color: black;
 
 a{
     text-decoration: none;
+    color: rgba(255, 255, 255, 0.669);
+    margin-left: 10px;
 }
 
-ul{
+ul li{
     list-style: none;
+    color: $base-white;
+}
+
+.container{
+    width: 100%;
+    background-color: black;
+    color: $base-white;
+    overflow: hidden;
+    
+    .addvertize{
+        padding: 10px;
+        width: 85vw;
+        margin-left: auto;
+        display: flex;
+        gap: 20px;
+        .addvertize-image{
+            width: 40%;
+            img{
+                max-width: 100%;
+                border-radius: 10px;
+            }
+        }
+        .addvertize-content{
+            padding: 40px 10px;
+            img{
+                max-width: 120px;
+                float: right;
+            }
+            span{
+                background-color: orange;
+                padding: 4px;
+                margin: 4px;
+                color: black;
+            }
+            p{
+                margin: 8px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .sidebar{
+        position: fixed;
+        top: 0px;
+        left: 0;
+        display: grid;        
+        padding: 10px;
+        z-index: 100;
+        height: 100vh;
+
+        .logo{
+            margin-left: 10px;
+            &:hover{
+                cursor: pointer;
+            }
+            img{
+                max-width: 100%;
+            }
+        }  
+
+        .btn{
+            position: fixed;
+            top: 60px;
+            width: fit-content;
+            margin-left: 10px;
+            left: 10px;
+            button{
+                background-color: rgba(193, 147, 62, 0.194);
+                border: none;
+                color: orange;
+                font-size: 11px;
+                padding: 2px 4px;
+                border-radius: 10px;
+                margin: 10px 0;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        } 
+
+        .menus{
+            ul{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                position: fixed;
+                margin-left: 25px;
+                top: 120px;
+                li{
+                    display: flex;
+                    color: rgba(255, 255, 255, 0.669);
+                    font-size: 15px;
+                    transition: 0.5s all;
+                    &:hover{
+                        cursor: pointer;
+                        transform: scale(1.2);
+                        color: $base-white;           
+                    }
+                    &:hover a{
+                        color: $base-white;
+                    }
+                }
+            
+            }
+        }
+       
+
+        a{
+            display: none;
+        }
+        &:hover a{
+            display: block;
+            
+        }
+        &:hover{
+            background-color: rgba(0,0,0,0.4);
+            width: 10%;
+        }
+       
+    }
+
+    .videos{
+        width: 90%;
+        margin-left: auto;
+        position: relative;
+        video{
+            border-radius: 30px 0 0 30px;
+            width: 100%;
+        }
+        .video-content{
+            width: 30%;
+            position: absolute;
+            top: 70px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            img{
+                max-width: 150px;
+            }
+            p{
+                font-size: 13px;
+                word-spacing: 2px;
+            }
+            span{
+                background-color: gray;
+                padding: 2px;
+                color: black;
+                border-radius: 4px;
+            }
+        }
+        .latest-movies{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 10px;
+            overflow: hidden;
+            .l-movies{
+                height: 250px;
+                transition: 0.5s all;
+                padding: 10px;
+                video{
+                    height: 100%;
+                    object-fit: cover;
+                    width: 100%;
+                    border-radius: unset;
+                    height: 100%;     
+                }
+                &:hover{
+                    transform: scale(1.5);
+
+                }
+            }
+        }
+    }
+    .footer{
+        margin-left: auto;
+        width: 90%;
+        height: 100vh;
+    }
 }
