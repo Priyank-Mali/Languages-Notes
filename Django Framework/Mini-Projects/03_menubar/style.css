@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+    padding: 0 10px;
+}
+
+/* Header */
+/* ======================================== */
+header{
+    background-color: black;
+}
+
+header .container .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container .navbar .logo{
+    flex: 0.5;
+}
+
+header .container .navbar .logo img{
+    max-width: 100%;
+}
+
+.container .navbar .navlist{
+    flex: 1;
+}
+
+.container .navbar .navlist ul{
+    display: flex;
+    gap: 20px;
+}
+
+.container .navbar .navlist ul li{
+    padding: 5px;
+}
+
+.container .navbar .navlist ul li a{
+    color: white;
+}
+
+.container .navbar .search{
+    color: white;
+    flex: 1;
+}
+
+.container .navbar .menu{
+    /* flex: 1; */
+    /* flex-grow: 2; */
+    /* flex-shrink: 1; */
+}
+
+.container .navbar .menu{
+    display: none;
+}
+
+.container .navbar .menu button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 2px;
+    height: 30px;
+    width: 30px;
+}
+
+/* ======== for responsive design on media query ===================== */
+.container .navbar .nav-show{
+    display: block !important;
+}
+
+.container .navbar .nav-show ul {
+    background-color: rgb(3, 3, 3); 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 0;
+}
+
+.container .navbar .navlist ul{
+    display: flex;
+    gap: 20px;
+}
+
+/* ================ responsive design ================= */
+
+@media (max-width:576px) {
+    .container .navbar .navlist{
+        display: none;
+    }
+    .container .navbar .menu{
+        display: block;
+    }
+    
+}
+
+/* ================== for design layout ================ */
+
+.navslide{
+    background-color: black;
+    position: fixed;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    right: -800px;
+    transition: all 0.9s;
+}
+
+.navslide ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.navslide ul li a{
+    color: white;
+    margin: 20px;
+}
+
+.slideshow{
+    right: 0;
+}

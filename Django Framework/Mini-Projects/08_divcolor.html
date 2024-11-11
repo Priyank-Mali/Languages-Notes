@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random color picker</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        input{
+            height: 20px;
+        }
+        #fill{
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+            margin: auto 100px;  
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Random Color Picker</h1>
+        
+        <input type="color" name="" id="color">
+        <button id="btn">Fill This Color</button>
+        
+        <hr>
+        
+        <div id="fill"></div>
+    </div>
+
+    <script>
+
+        let randomColorPicker = ()=>{
+            let color = document.getElementById("color");
+            document.getElementById("fill").setAttribute("style",`background-color: ${color.value}`);
+        }
+
+        document.getElementById("btn").onclick = randomColorPicker()
+        
+
+        document.getElementById("color").addEventListener("input",(e)=>{
+            document.getElementById("fill").style.backgroundColor = e.target.value;
+        })
+
+    </script>
+</body>
+</html>

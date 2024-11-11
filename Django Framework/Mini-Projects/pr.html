@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            list-style: none;
+            cursor: pointer;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .container{
+            max-width: 100vw;
+            padding: 0 10px;
+            background-color: black;    
+        }
+        
+        /* ==================================================== */
+        .container nav{
+            max-width: 98%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        .container nav .logo1{
+            /* flex: 0.5;    */
+            display: grid;
+            place-items: center;
+        }
+        .container nav .logo1 img{
+            max-width: 100%;
+        }
+       
+        .container nav .nav-list ul{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            height: 100%;
+        }
+        .container nav .nav-list ul li a{
+            color: white;
+            font-size: 15px;
+        }
+        .container nav .nav-list ul li a i{
+            padding: 0 2px;
+        }
+        .container nav .search ul{
+            display: flex;
+            height: 100%;
+            gap: 15px;
+            letter-spacing: 1px;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+        .container nav .search ul a{
+            color: white;
+        }
+        .container nav .search ul li button{
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 17px;
+        }
+        .container nav .btn{
+            display: none;
+        }
+
+        /* ( media query )================================================= */
+
+        @media (max-width:1198px){
+
+            .container nav{
+                max-width: 98%;
+                margin: auto;
+                display: flex;
+                justify-content: space-around;
+            }
+            .container nav .nav-list{
+                display: none;
+            }
+            .container nav .logo1{
+                order: 2;
+            }
+            .container nav .logo1 img{
+                max-width: 100%;
+            }
+            .container nav .logo2{
+                order: 3;
+            }
+            .container nav .logo2 img{
+                max-width: 100%;
+            }
+            .container nav .search{
+            }
+            .container nav .search ul li:nth-child(2){
+                display: none;  
+            }
+            .container nav .search ul li:nth-child(1){
+                display: none;  
+            }
+            .container nav .btn{
+            display: block;
+            order: 4;
+            display: grid;
+            }
+            .container nav .btn button{
+                color: white;
+                background-color: transparent;
+                border: none;
+                font-size: 1.2rem ;
+            }
+        }
+
+        /* ============================================== */
+       .show-navbar{
+        display: none;
+       }
+        #togglenavbar {
+            text-align: end;
+            background-color: black ;
+            width: 50%;
+            float: right;
+        }
+        
+        #togglenavbar ul li{
+            padding: 10px;
+            display: flex;
+                justify-content: space-between;
+            color: white;
+        }
+        #togglenavbar ul li a{
+            letter-spacing: 1px;
+            color: white;
+        }
+
+        @media (max-width:550px) {
+            #togglenavbar {
+                text-align: end;
+                background-color: black ;
+                width: 100%;
+                float: right;
+            }
+       }
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+
+            <nav>
+                <div class="logo1">
+                    <img src="https://www.tcs.com/content/dam/global-tcs/en/images/home/tcs-logo-1.svg" alt="">
+                </div>
+                <div class="nav-list">
+                    <ul>
+                        <li><a href="">What We Do<i class="fa-solid fa-chevron-down"></i></a></li>
+                        <li><a href="">Who We Are<i class="fa-solid fa-chevron-down"></i></a></li>
+                        <li><a href="">Insights<i class="fa-solid fa-chevron-down"></i></a></li>
+                        <li><a href="">Careers<i class="fa-solid fa-chevron-down"></i></a></li>
+                        <li><a href="">Newsroom<i class="fa-solid fa-chevron-down"></i></a></li>
+                        <li><a href="">Investors<i class="fa-solid fa-chevron-down"></i></a></li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <ul>
+                        <li><a href="">CONTACT US</a></li>
+                        <li><a href="">TCS WORLDWIDE</a></li>
+                        <li><button><i class="fa-solid fa-magnifying-glass"></i></button></li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <button id="btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+                <div class="logo2">
+                    <img src="https://www.tcs.com/content/dam/global-tcs/en/images/home/tata-logo-1.svg" alt="">
+                </div>
+            </nav>
+
+        </div>
+        
+        <div id="togglenavbar" class="show-navbar">
+            <ul>
+                <li><a href="">What We Do</a><i class="fa-solid fa-chevron-down"></i></li>
+                <li><a href="">Who We Are</a><i class="fa-solid fa-chevron-down"></i></li>
+                <li><a href="">Insights</a><i class="fa-solid fa-chevron-down"></i></li>
+                <li><a href="">Careers</a><i class="fa-solid fa-chevron-down"></i></li>
+                <li><a href="">Newsroom</a><i class="fa-solid fa-chevron-down"></i></li>
+                <li><a href="">Investors</a><i class="fa-solid fa-chevron-down"></i></li>
+            </ul>   
+        </div>
+    </header>
+
+
+    <script>
+
+        document.getElementById("btn").addEventListener("click",()=>{
+        document.getElementById("togglenavbar").classList.toggle("show-navbar")
+
+
+        })
+    </script>
+</body>
+</html>

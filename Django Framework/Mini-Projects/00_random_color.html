@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <script>
+        
+        function getRandomColor(){
+            // a + r (b-a) // a = 0 , b = 255
+            let red = Math.ceil(0 + Math.random()*255);
+            let green = Math.ceil(0 + Math.random()*255);
+            let blue = Math.ceil(0 + Math.random()*255);
+            return `rgb(${red},${green},${blue})`
+        }
+
+        // let boxes = document.getElementsByClassName("container")[0].children;
+        let boxes = document.getElementsByClassName("box");
+        console.log(boxes);
+        Array.from(boxes).forEach(element => {
+            console.log(element);
+            element.style.backgroundColor = getRandomColor();
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menubar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="https://www.tcs.com/content/dam/global-tcs/en/images/home/tcs-logo-1.svg" alt="">
+            </div>
+            
+            <div class="navlist" id="nav">
+                <ul>
+                    <li><a href="">What We Do</a></li>
+                    <li><a href="">Insights</a></li>
+                    <li><a href="">Careers</a></li>
+                </ul>
+            </div>
+            
+            <div class="search">
+                <i class="fa-solid fa-search"></i>
+            </div>
+            
+            <div class="menu">
+                <!-- <button onclick="showMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button> -->
+                <button onclick="slideshow('navslide')">
+                    <i class="fa-solid fa-bars" id="icon1"></i>
+                </button>
+            </div>
+        </div>    
+    </div>
+</header>
+
+<div class="navslide" id="navslide">
+    <ul>
+        <li><a href="">What We Do</a></li>
+        <li><a href="">Insights</a></li>
+        <li><a href="">Careers</a></li>
+    </ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

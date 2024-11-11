@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Option List</title>
+</head>
+<body>
+    
+    <h1>Create List</h1>
+    <label for="ques">Enter Items :</label>
+    <input type="text" name="" id="ques">
+
+    <select name="" id="options">
+        <option value="">--Select--</option>
+    </select>
+
+    <script>
+        document.getElementById("ques").onkeydown = (e)=>{
+            if(e.key === "Enter"){
+                e.preventDefault();
+                // Prevent Default Action: event.preventDefault() ensures that the page doesn't reload when "Enter" is pressed.
+                
+                let questions = document.getElementById("ques");
+                if(questions.value){
+                    let option = document.createElement("option");
+                    option.append(questions.value);
+                    document.getElementById("options").appendChild(option);
+                    questions.value = ""
+
+                }else{
+                    alert("add something")
+                }
+            }
+        }
+    </script>
+</body>
+</html>

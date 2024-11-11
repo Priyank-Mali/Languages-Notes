@@ -76,3 +76,33 @@ The models are imported from the models.py file.
 The view then sends the data to a specified template in the template folder.
 The template contains HTML and Django tags, and with the data it returns finished HTML content back to the browser.
 """
+
+
+"""
+after creating django project there are some files automatic created
+
+manage.py : 
+    A command-line utility that lets you interact with this django project in various ways.
+
+project /
+    __init__.py
+    settings.py
+    urls.py
+    asgi.py
+    wsgi.py
+
+__init__.py :
+    an empty file that tells python that this directory should be considered as a python pakage
+
+settings.py :
+    configration for django project
+
+urls.py : 
+    This file is typically used in web frameworks like Django or Flask to define the URL patterns for your application. These patterns map incoming URLs to specific views or functions in your project that handle the requests.
+
+asgi.py : (Asynchronous Server Gateway Interface)
+    An entry-point for ASGI-compatible web servers to serve your project.
+
+wsgi.py : 
+
+"""
