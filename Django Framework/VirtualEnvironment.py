@@ -30,6 +30,9 @@ It allows you to create an isolated environment for your Python projects, ensuri
 steps:
 
 -> pip install virtualenv
+-> virtualenv <virtual-environment-name>
+
+or
 
 -> python -m venv <virtual-environment-name>
     make sure:
