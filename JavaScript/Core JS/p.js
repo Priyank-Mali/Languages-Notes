@@ -1,5 +1,6 @@
-function addTwo(num1,num2){
-    return num1 + num2
+function addtocart(){
+    return arguments
 }
 
-console.log(addTwo(1,2))
+
+console.log(addtocart(100,200,300))
