@@ -47,13 +47,20 @@
         const qw = [1,2,3,4,5]
         const ew = [6,8,9,0,-1]
 
-        const all = [...qw,...ew] // spread operator
+        const all = [...qw,...ew] // spread operator    
 
         let new_arr = [1,2,3,4,[1,2,3],8,[7,8],6,5,2]
         console.log(new_arr.flat(Infinity))
 
         let name = Array.from("priyank")
         console.log(name)
+
+        let score1 = 100
+        let score2 = 100
+        let score3 = 100
+
+        let all_score_array = Array.of(score1,score2,score3)
+        console.log(all_score_array)
 
         let arr = [
             ["sadasd",12,"male","sadasd"],

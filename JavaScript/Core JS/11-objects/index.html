@@ -21,6 +21,10 @@
          *      let object_name = { pr1 : value1 , pr2 : valu2};
          * 
          * 2) By creating instance of object
+         *       
+         *      let new_obj = {}
+         * 
+         *      or
          * 
          *      var object_name = new Object();
          *      object_name.id = 1,
@@ -29,12 +33,13 @@
          * 3) By using Object Constructor
          * 
          *      <scrip>
+                    // function constructor
          *          function employee(id,name,salary){
          *      thid.id = id,
          *      thid.name = name,
          *      this.salary = salary
          * }
-         *      emp = employee(1,"priyank",1000)
+         *      emp = new employee(1,"priyank",1000)
          * 
          *      </scrip>
         */
@@ -62,6 +67,11 @@
         delete obj.name
         console.log(obj)
 
+        obj.greeting = function(){
+            return `hello ${this.name}` // this referes for object properties 
+        }
+        console.log(obj.greeting)
+
         for(let key in obj){
             console.log(key + "-->" + obj[key])
         }
@@ -71,6 +81,15 @@
         console.log(Object.entries(obj)); // get both keys and values
         
         // cloning an object using assign
+
+        const target = { a: 1, b: 2 };
+        const source = { b: 4, c: 5 };
+
+        const returnedTarget = Object.assign(target, source);
+        // const returnedTarget = {...target, ...source};
+
+        console.log(target);
+        // Expected output: Object { a: 1, b: 4, c: 5 }
 
         let new_obj = Object.assign({},obj)
         console.log(new_obj)
@@ -111,6 +130,7 @@
         Object.entries(obj).forEach(([key,value]) => {
             console.log(key,value)
         })
+
 
     </script>
 </body>
