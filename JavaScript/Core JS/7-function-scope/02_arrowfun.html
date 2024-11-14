@@ -30,6 +30,20 @@
         }
         console.log(process(2,3));
 
+        const user = {
+            username : "priyank",
+            price : 999,
+
+            // this is not work with arrow function
+            welcomeMsg : function(){
+                console.log(this)
+                return `Welcome, ${this.username}`
+            }
+        }
+
+        console.log(user.welcomeMsg())
+        user.username = "mali"
+        console.log(user.welcomeMsg())
 
 
         /**

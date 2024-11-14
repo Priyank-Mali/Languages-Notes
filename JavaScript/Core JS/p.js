@@ -1,5 +1,11 @@
-function addTwo(num1,num2){
-    return num1 + num2
+const user = {
+    name : "priyank",
+    price : 999,
+
+    welcomeMsg : function(){
+        return `welcome, ${this.name}`
+    }
 }
 
-console.log(addTwo(1,2))
+
+console.log(user.welcomeMsg())
