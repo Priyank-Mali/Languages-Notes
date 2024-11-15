@@ -21,6 +21,10 @@
         let sum = (a,b) => a+b
         console.log(sum(10,9))
 
+        // cannot print object without '()'
+        let name = () => ({username : "priyank"})
+        console.log(name())
+
         /**
          * function with parameter , multiple lines of function body =================
          */
@@ -35,6 +39,7 @@
             price : 999,
 
             // this is not work with arrow function
+            // this is only work when it is an object
             welcomeMsg : function(){
                 console.log(this)
                 return `Welcome, ${this.username}`
@@ -50,11 +55,19 @@
          * function with no name is called ==> Anonymous function =====================
          *  (IIFE) ==> immediately-invoked function expression
          *  means immediately call function after its defination
+         * if we dont't need global scope variable then thats why we are using IIFE
          */
 
+        //  ()()
          (function(){
             console.log("priyank mali");
-         })()
+         })(); // ; => is required to stop this code (two IIFE)
+
+         let a = 10;
+
+        (function () {
+            console.log(a)
+        })()
 
     </script>
 

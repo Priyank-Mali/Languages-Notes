@@ -24,7 +24,7 @@ let userOne = {
     email : "priyank@gmail.com"
 }
 
-let userTwo = userOne // not copying // assigning by reference
+let userTwo = userOne // not copying // assigning by reference // call by reference
 
 userTwo.email = "rahul@gmail.com"
 
