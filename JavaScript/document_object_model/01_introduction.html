@@ -21,7 +21,6 @@
     4.) JS can remove / add existing HTML elements and attributes
     5.) JS can create new HTML events
     -->
-
     <script>
         // How to target DOM object:
 
@@ -44,11 +43,17 @@
 
         // name --> document.getElementsByName("name") --> NodeList
 
+        
+        // <p id="hello">Hello world</p>
+
+        // querySelector --> document.querySelector("#hello")
+        // (return first --> document.querySelector(".hello")
+        //   element)    --> document.querySelector("p") 
+        //               --> document.querySelector('input[type="text"]') 
+
+        // querySelectorAll --> document.querySelectorAll() --> return NodeList
         //-------------------------------------------------------------------
         
-        // foreach loop is not apply on --> HTMLCollection
-        // Array.from(HTMLCollection).foreach((e)=>e)
-
     </script>
 
 </body>
