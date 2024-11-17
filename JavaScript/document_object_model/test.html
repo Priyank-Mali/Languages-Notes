@@ -5,34 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style >
-        .container{
-            background-color: red;
-        }
-        .yellow{
-            background-color: yellow;
+        .image{
+            color: red;
+            width: 400px;
+            border: 2px solid red;
+            border-radius: .5rem;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- childs -->
-        <div class="box">1</div>
-        <div class="box">2</div>
-        <div class="box">3</div>
-        <div class="box">4</div>
-    </div>
-
+    <button id="set">set</button>
+    <button id="remove" onmouseover="">remove</button>
+    <button onmouseenter="geta()">get</button>
+    <hr>
+    <img src="https://next-images.123rf.com/index/_next/image/?url=https://assets-cdn.123rf.com/index/static/assets/top-section-bg.jpeg&w=3840&q=75" alt="">
     <script>
-    const all = document.querySelector(".container")
-    if(all.className == "container"){
-       all.removeAttribute("class")
-       all.setAttribute("class","yellow")
-        
-    }else{
+        document.getElementById("set").addEventListener("click",seta)
 
-    }
-    console.log(all)
-       </script>
+        document.getElementById("remove").addEventListener("mouseover",removex)
+       
+        function seta(){
+        document.getElementsByTagName("img")[0].setAttribute("class","image")
+       }
+
+       function removex(){
+        document.getElementsByTagName("img")[0].removeAttribute("class")
+       }
+
+       function geta(){
+        let src = document.getElementsByTagName("img")[0].getAttribute("src")
+        alert(src)
+       }
+    </script>
 </body>
 </html>
