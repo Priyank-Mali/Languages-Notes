@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="height">Enter Height</label>
+    <input type="text" name="" id="height">
+    <br>
+    <label for="width">Enter Width</label>
+    <input type="text" name="" id="width">
+    <br>
+    <label for="padding">Enter Padding</label>
+    <input type="text" name="" id="padding">
+    <br>
+    <label for="border">Enter Border</label>
+    <input type="text" name="" id="border">
+    <br>
+    <label for="margin">Enter Margin</label>
+    <input type="text" name="" id="margin">
+    <br>
+
+    <button id="btn">Calculate</button>
+
+    <p>Total Dimension of Div : <b id="ans"></b></p>
+
+    <script>
+
+        // normal function ========================================
+
+        // function add(a,b){
+        //     return a+b
+        // }
+        // console.log(add(10,10))
+
+        // using currying Fn =====================================
+
+        // function add(a){
+        //     return function(b){
+        //         return a+b
+        //     }
+        // }
+
+        // console.log(add(10)(10))
+
+        
+       document.getElementById("btn").addEventListener("click",()=>{
+
+            const height = parseInt(document.getElementById("height").value);
+            const width = parseInt(document.getElementById("width").value);
+            const padding = parseInt(document.getElementById("padding").value);
+            const border = parseInt(document.getElementById("border").value);
+            const margin = parseInt(document.getElementById("margin").value);
+
+            function totalDimension(height){
+                return function(width){
+                    return function(padding){
+                        return function(border){
+                            return function(margin){
+                                return (height + 2 * padding + 2 * border + 2 * margin) + width
+                            }
+                        }
+                    }
+                }  
+            }
+
+            const total = totalDimension(height)(width)(padding)(border)(margin)
+            document.getElementById("ans").innerText = total
+
+       });
+
+
+    </script>
+</body>
+</html>

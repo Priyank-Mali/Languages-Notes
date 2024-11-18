@@ -1,12 +1,20 @@
 
-function isPrime(number){
-        for (let start=2;start<=Math.sqrt(number);start++){
-                if (number%start == 0){
-                        return false
-                } 
-                
+let a = 0
+let b = 1
+
+function fibo(num){
+
+        let arr = [a,b]
+        
+        for (let i=0;i<num-2;i++){
+                let sum = a + b
+                arr.push(sum)
+                a = b
+                b = sum
         }
-        return true
+       
+        return arr
 }
 
-console.log([54,3,4,5,7,11,19,6,7,,4].filter(isPrime)) 
+console.log(fibo(10))
+

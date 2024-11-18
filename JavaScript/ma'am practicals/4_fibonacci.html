@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .span{
+            margin-right: 10px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <label for="">Enter Range : </label>
+    <input type="text" name="" id="number">
+    <hr>
+    <p>----Fibonacci Series---</p>
+    <b id="ans"><span class="span">0</span><span class="span">1</span></b>
+
+    <script>
+
+
+        function fibonacci(num){
+            return num * --num
+        }
+        function higherOFn(otherfn,num){
+            otherfn(num)
+        }
+        document.getElementById("number").addEventListener("keydown",(e)=>{
+            let number = document.getElementById("number").value
+            if (e.key === "Enter"){
+                function fibo(number){
+                    let a = 0
+                    let b = 1
+                    
+                    // document.getElementById("ans")
+                    for (let i=0;i<number-2;i++){
+                        let sum = a + b;
+                        let span = document.createElement("span")
+                        span.setAttribute("class","span")
+                        span.append(sum)
+                        document.getElementById("ans").appendChild(span)
+
+                        a = b
+                        b = sum
+                    }
+                }
+                fibo(number)
+            }
+        })
+    </script>
+</body>
+</html>

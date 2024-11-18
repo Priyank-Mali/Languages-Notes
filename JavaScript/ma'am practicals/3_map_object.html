@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Enter Technical Language : </label>
+    <input type="text" name="" id="name">
+   
+    <hr>
+
+    <div>
+        <ul id="lists">
+            
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById("name").addEventListener("keydown",(e)=>{
+            if (e.key === "Enter"){
+                let li = document.createElement("li")
+                li.appendChild(document.createTextNode(document.getElementById("name").value))
+                let button = document.createElement("button")
+                let cross = document.createTextNode("❌")
+                button.appendChild(cross)
+                li.appendChild(button)
+                document.getElementById("lists").appendChild(li)
+                document.getElementById("name").value = ""
+
+                button.addEventListener("click",()=>{
+                    document.getElementById("lists").removeChild(li)
+                })
+            }
+        })
+    </script>
+</body>
+</html>
