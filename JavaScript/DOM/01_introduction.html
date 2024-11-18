@@ -11,6 +11,8 @@
     
     with DOM : JavaScript gets all the power to create dynamic HTML:
 
+    The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.
+
     The HTML DOM is a standard for how to get, change, add, or delete HTML elements
 
     1.) JS can change all the HTML element in the page
@@ -19,7 +21,6 @@
     4.) JS can remove / add existing HTML elements and attributes
     5.) JS can create new HTML events
     -->
-
     <script>
         // How to target DOM object:
 
@@ -36,12 +37,23 @@
 
         // id -->  document.getElementById("id_name")
 
-        // class --> document.getElementsByClassName("class_name")
+        // class --> document.getElementsByClassName("class_name") --> HTMLCollection
 
-        // Tag --> document.getElementsByTagName("tag_name")
+        // Tag --> document.getElementsByTagName("tag_name") --> HTMLCollection
+
+        // name --> document.getElementsByName("name") --> NodeList
 
         
+        // <p id="hello">Hello world</p>
 
+        // querySelector --> document.querySelector("#hello")
+        // (return first --> document.querySelector(".hello")
+        //   element)    --> document.querySelector("p") 
+        //               --> document.querySelector('input[type="text"]') 
+
+        // querySelectorAll --> document.querySelectorAll() --> return NodeList
+        //-------------------------------------------------------------------
+        
     </script>
 
 </body>

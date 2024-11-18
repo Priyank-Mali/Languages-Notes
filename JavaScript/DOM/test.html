@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style >
+      
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="name" onkey data-createdby="priyank" data-conceptby="mali">
+     <ul id="ul">
+        <li>list 1</li>
+     </ul>
+    
+   <script>
+    console.log(document.getElementById("name").dataset)
+
+    document.getElementById("name").addEventListener("keydown",(e)=>{
+        if (e.key === "Enter"){
+            // console.log()
+            let li = document.createElement("li")
+            li.add(document.createTextNode(document.getElementById("name").value))
+            // console.log(text)
+            document.getElementById("ul").add(li)
+            }
+    })
+    
+
+   </script>
+</body>
+</html>
