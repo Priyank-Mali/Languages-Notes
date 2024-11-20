@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>    
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            gap: 10px;
+            height: 80vh;
+            width: 80vw;
+            margin: 10px auto;
+        }
+        .panel{
+            background-size: auto 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            flex: 0.5;
+            border-radius: 10px;
+        }
+        img{
+            /* max-width: 100%; */
+        }
+
+        .active{
+            flex: 5;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="panel active" style="background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg);">
+        </div>
+        <div class="panel" style="background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg);">
+        </div>
+        <div class="panel" style="background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg);">
+        </div>
+        <div class="panel" style="background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg);">
+        </div>
+        <div class="panel" style="background-image: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg);">
+        </div>
+    </div>
+
+    <script>
+
+        (function(){
+            let sliders = document.querySelectorAll(".panel")
+            sliders.forEach(e=>{
+                e.addEventListener("click",()=>{
+                    if (e.classList.contains("active")){
+                        e.classList.remove("active")
+                    } else {
+                        e.classList.add("active")
+                    }
+                })
+            })
+            console.log()
+        })();
+
+    </script>
+</body>
+</html>

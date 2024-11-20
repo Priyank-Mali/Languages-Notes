@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Random Background Color</h1>
+    <button id="btn">Click to Change Background Color</button>
+
+    <script>
+        function randomColorGenerator(){
+            let red = Math.round(Math.random()*255)
+            let green = Math.round(Math.random()*255)
+            let blue = Math.round(Math.random()*255)
+
+            return `rgb(${red},${green},${blue})`
+        }
+
+        document.getElementById("btn").addEventListener("click",()=>{
+            document.body.style.backgroundColor = randomColorGenerator()
+        })
+    </script>
+</body>
+</html>

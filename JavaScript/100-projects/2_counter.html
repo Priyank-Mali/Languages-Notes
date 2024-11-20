@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inc{
+            color: green;
+        }
+        .dnc{
+            color: red;
+        }
+        .neg{
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Javascript Counter</h1>
+    <h1>0</h1>
+    <button id="inc">Increment</button>
+    <button id="dnc">Decrement</button>
+
+    <script>
+
+        (function(){
+            let buttons = document.getElementsByTagName("button");
+            let counter = parseInt(document.getElementsByTagName("h1")[1].innerText);
+
+            Array.from(buttons).forEach(element => {
+                element.addEventListener("click",()=>{
+                    if (element.id == "inc") {
+                        counter ++;
+                    } else if (element.id == "dnc") {
+                        counter --;
+                    }
+                    document.getElementsByTagName("h1")[1].innerText = counter
+                })
+            });
+
+        })();
+
+        // document.getElementById("inc").addEventListener("click",()=>{
+           
+        //     document.getElementsByTagName("h1")[1].innerText ++;
+        //     document.getElementsByTagName("h1")[1].setAttribute("class","inc")
+
+        // })
+        
+        // document.getElementById("dnc").addEventListener("click",()=>{
+            
+        //     document.getElementsByTagName("h1")[1].innerText --;
+        //     document.getElementsByTagName("h1")[1].setAttribute("class","dnc")
+
+
+        // })
+
+    </script>
+</body>
+</html>
