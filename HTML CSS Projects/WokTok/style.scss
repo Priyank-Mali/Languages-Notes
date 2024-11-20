@@ -44,95 +44,124 @@ header{
      // ====================================================================
     // navbar
 
-    .navbar{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 20px;
+    .container{
+        width: 90vw;
+        margin: auto;
 
-        .nav-list {
-            flex: 1;
-
-            @media (max-width:990px) {
-                display: none;
-            }
-            ul{
+            .navbar{
                 display: flex;
-                gap: 20px;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 20px;
 
-                li{
-                    a{
+                .nav-list {
+                    flex: 1;
+
+                    @media (max-width:990px) {
+                        display: none;
+                    }
+                    ul{
+                        display: flex;
+                        gap: 20px;
+
+                        li{
+                            a{
+                                color: var(--color-white);
+                            }
+                        }
+                    }
+                }
+
+                .nav-logo{
+                    flex: 0.9;
+                    img{
+                        height: 100px;
+                    }
+                }
+
+                .login-cart{
+                    ul{
+                        display: flex;
+                        gap: 15px;
+
+                        li{
+                            &:nth-child(odd){
+                                @media (max-width:749px) {
+                                    display: none;
+                                }
+                                
+                            }
+                            a{
+                                color: var(--color-white);
+                            }
+                        }
+                    }
+                    
+                }
+
+                .navbar-responsive{
+                    flex: 1;
+                    i{
                         color: var(--color-white);
+                    }
+                    @media (min-width:990px) {
+                        display: none;
+                    }
+                    @media (max-width:990px) {
+                        display: block;
                     }
                 }
             }
-        }
+    }
 
-        .nav-logo{
-            flex: 0.9;
-            img{
-                height: 100px;
-            }
-        }
 
-        .login-cart{
-            ul{
-                display: flex;
-                gap: 15px;
+    .food-varieties{
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.417);
+        color: var(--color-white);
+        text-align: center;
 
-                li{
-                    &:nth-child(odd){
-                        @media (max-width:749px) {
-                            display: none;
-                        }
-                        
-                    }
-                    a{
-                        color: var(--color-white);
-                    }
+        div{
+            display: grid;
+            place-items: center;
+
+            a{
+                img{
+                    max-width: 35%;
                 }
             }
             
-        }
-
-        .navbar-responsive{
-            flex: 1;
-            i{
-                color: var(--color-white);
-            }
-            @media (min-width:990px) {
-                display: none;
-            }
-            @media (max-width:990px) {
-                display: block;
-            }
-        }
-    }
-    .food-varieties{
-        padding: 20px;
-        display: flex;
-        border-top: 1px solid white;
-        justify-content: center;
-        align-items: center;
-        gap: 20px;
-        color: var(--color-white);
-
-        div{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            img{
-                width: 100px;
-                object-fit: cover;
+            p{
+                font-family: "Hanalei Fill", system-ui;
+                font-size: var(--fs-1);
+                line-height: 1.5;
+                letter-spacing: 1px;
+                width: fit-content;
             }
         }
         
     }
 
-    .slider{
-        width: 100%;
-        border: 2px solid white;
-    }
+}
 
+.slider{
+    display: flex;
+    flex-direction: column;
+
+    a{
+        width: 100%;
+        position: absolute;
+        .panel{
+            opacity: 0;
+            transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+            img{
+                width: 100%;
+            }
+        }
+        .active{
+            opacity: 4;
+        }
+    }
 }

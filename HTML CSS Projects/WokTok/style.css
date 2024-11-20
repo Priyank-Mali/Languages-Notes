@@ -40,81 +40,104 @@ header .free-shipping {
 header .free-shipping p {
   font-size: var(--fs-1);
 }
-header .navbar {
+header .container {
+  width: 90vw;
+  margin: auto;
+}
+header .container .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
 }
-header .navbar .nav-list {
+header .container .navbar .nav-list {
   flex: 1;
 }
 @media (max-width: 990px) {
-  header .navbar .nav-list {
+  header .container .navbar .nav-list {
     display: none;
   }
 }
-header .navbar .nav-list ul {
+header .container .navbar .nav-list ul {
   display: flex;
   gap: 20px;
 }
-header .navbar .nav-list ul li a {
+header .container .navbar .nav-list ul li a {
   color: var(--color-white);
 }
-header .navbar .nav-logo {
+header .container .navbar .nav-logo {
   flex: 0.9;
 }
-header .navbar .nav-logo img {
+header .container .navbar .nav-logo img {
   height: 100px;
 }
-header .navbar .login-cart ul {
+header .container .navbar .login-cart ul {
   display: flex;
   gap: 15px;
 }
 @media (max-width: 749px) {
-  header .navbar .login-cart ul li:nth-child(odd) {
+  header .container .navbar .login-cart ul li:nth-child(odd) {
     display: none;
   }
 }
-header .navbar .login-cart ul li a {
+header .container .navbar .login-cart ul li a {
   color: var(--color-white);
 }
-header .navbar .navbar-responsive {
+header .container .navbar .navbar-responsive {
   flex: 1;
 }
-header .navbar .navbar-responsive i {
+header .container .navbar .navbar-responsive i {
   color: var(--color-white);
 }
 @media (min-width: 990px) {
-  header .navbar .navbar-responsive {
+  header .container .navbar .navbar-responsive {
     display: none;
   }
 }
 @media (max-width: 990px) {
-  header .navbar .navbar-responsive {
+  header .container .navbar .navbar-responsive {
     display: block;
   }
 }
 header .food-varieties {
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
-  border-top: 1px solid white;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.417);
   color: var(--color-white);
+  text-align: center;
 }
 header .food-varieties div {
+  display: grid;
+  place-items: center;
+}
+header .food-varieties div a img {
+  max-width: 35%;
+}
+header .food-varieties div p {
+  font-family: "Hanalei Fill", system-ui;
+  font-size: var(--fs-1);
+  line-height: 1.5;
+  letter-spacing: 1px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.slider {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-header .food-varieties div img {
-  width: 100px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-header .slider {
+.slider a {
   width: 100%;
-  border: 2px solid white;
+  position: absolute;
+}
+.slider a .panel {
+  opacity: 0;
+  transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.slider a .panel img {
+  width: 100%;
+}
+.slider a .active {
+  opacity: 4;
 }/*# sourceMappingURL=style.css.map */
