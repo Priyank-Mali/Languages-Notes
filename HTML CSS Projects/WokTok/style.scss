@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+:root{
+    --color-black : black;
+    --color-white : white;
+
+    --fs-1 : 14px;
+    --fs-2 : 16px;
+    --fs-3 : 18px;
+}
+
+header{
+    background-color: black;
+
+    .free-shipping{
+        background-color: rgb(233, 25, 25);
+        text-align: center;
+        text-transform: uppercase;
+        color: var(--color-white);
+        letter-spacing: 1px;
+        padding: 10px;
+
+        p{
+            font-size: var(--fs-1);
+        }
+    }
+
+     // ====================================================================
+    // navbar
+
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+
+        .nav-list {
+            flex: 1;
+
+            @media (max-width:990px) {
+                display: none;
+            }
+            ul{
+                display: flex;
+                gap: 20px;
+
+                li{
+                    a{
+                        color: var(--color-white);
+                    }
+                }
+            }
+        }
+
+        .nav-logo{
+            flex: 0.9;
+            img{
+                height: 100px;
+            }
+        }
+
+        .login-cart{
+            ul{
+                display: flex;
+                gap: 15px;
+
+                li{
+                    &:nth-child(odd){
+                        @media (max-width:749px) {
+                            display: none;
+                        }
+                        
+                    }
+                    a{
+                        color: var(--color-white);
+                    }
+                }
+            }
+            
+        }
+
+        .navbar-responsive{
+            flex: 1;
+            i{
+                color: var(--color-white);
+            }
+            @media (min-width:990px) {
+                display: none;
+            }
+            @media (max-width:990px) {
+                display: block;
+            }
+        }
+    }
+    .food-varieties{
+        padding: 20px;
+        display: flex;
+        border-top: 1px solid white;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        color: var(--color-white);
+
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img{
+                width: 100px;
+                object-fit: cover;
+            }
+        }
+        
+    }
+
+    .slider{
+        width: 100%;
+        border: 2px solid white;
+    }
+
+}

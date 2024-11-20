@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+:root {
+  --color-black: black;
+  --color-white: white;
+  --fs-1: 14px;
+  --fs-2: 16px;
+  --fs-3: 18px;
+}
+
+header {
+  background-color: black;
+}
+header .free-shipping {
+  background-color: rgb(233, 25, 25);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+  letter-spacing: 1px;
+  padding: 10px;
+}
+header .free-shipping p {
+  font-size: var(--fs-1);
+}
+header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+header .navbar .nav-list {
+  flex: 1;
+}
+@media (max-width: 990px) {
+  header .navbar .nav-list {
+    display: none;
+  }
+}
+header .navbar .nav-list ul {
+  display: flex;
+  gap: 20px;
+}
+header .navbar .nav-list ul li a {
+  color: var(--color-white);
+}
+header .navbar .nav-logo {
+  flex: 0.9;
+}
+header .navbar .nav-logo img {
+  height: 100px;
+}
+header .navbar .login-cart ul {
+  display: flex;
+  gap: 15px;
+}
+@media (max-width: 749px) {
+  header .navbar .login-cart ul li:nth-child(odd) {
+    display: none;
+  }
+}
+header .navbar .login-cart ul li a {
+  color: var(--color-white);
+}
+header .navbar .navbar-responsive {
+  flex: 1;
+}
+header .navbar .navbar-responsive i {
+  color: var(--color-white);
+}
+@media (min-width: 990px) {
+  header .navbar .navbar-responsive {
+    display: none;
+  }
+}
+@media (max-width: 990px) {
+  header .navbar .navbar-responsive {
+    display: block;
+  }
+}
+header .food-varieties {
+  padding: 20px;
+  display: flex;
+  border-top: 1px solid white;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: var(--color-white);
+}
+header .food-varieties div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .food-varieties div img {
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header .slider {
+  width: 100%;
+  border: 2px solid white;
+}/*# sourceMappingURL=style.css.map */
