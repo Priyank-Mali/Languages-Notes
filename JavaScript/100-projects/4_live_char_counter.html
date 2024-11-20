@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: rgb(10, 100, 93);
+        }
+        .container{
+            width: 20%;
+            border: 1px solid black;
+            margin: 200px auto;
+            padding: 20px;
+            background-color: aquamarine;
+            border-radius: 15px;
+        }
+
+        textarea{
+            padding: 10px;
+            width: 90%;
+            height: 20vh;
+            letter-spacing: 1px;
+            font-size: 1rem;
+        }
+        span{
+            color: blue;
+            font-size: 2rem;
+        }
+        .btn{
+           width: fit-content;
+           margin: auto;
+        }
+        .btn input{
+            padding: 10px 15px;
+            background-color: black;
+            border-radius: 20px;  
+            color: white;
+            transition: 0.5s all;
+        }
+        .btn input:hover{
+            background-color: transparent;
+            color: black;
+        }
+
+        @media (max-width:576px) {
+            .container{
+                width: 80%;
+                border: 1px solid black;
+                margin: auto;
+                padding: 20px;
+            }
+            textarea{
+                width: 90%;
+                height: 20vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="main">
+            <h1>Live Character Counter</h1>
+            <textarea name="" id="text" placeholder="Enter Your Text Here" autofocus></textarea>
+            <p>Total Characters you typed including space : <span id="ans"></span></p>
+            <div class="btn">
+                <input type="button" name="" id="Refresh" value="Refresh">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        
+        let counter = 0
+        // document.getElementById("text").addEventListener("keydown",(e)=>{
+        //     if (e) {
+        //         counter ++;
+        //         console.log(counter)
+        //     }
+        //     document.getElementById("ans").innerText = counter
+        // })
+
+        document.getElementById("text").addEventListener("keydown",()=>{
+            document.getElementById("ans").innerText = document.getElementById("text").value.length
+        })
+
+        document.getElementById("Refresh").addEventListener("click",()=>{
+            window.location.reload()
+        })
+        
+    </script>
+</body>
+</html>
