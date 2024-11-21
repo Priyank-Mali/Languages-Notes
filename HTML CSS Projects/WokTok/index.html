@@ -37,29 +37,53 @@
                 <div class="login-cart">
                     <ul>
                         <li><a href="">HELP</a></li>
-                        <li><a href=""><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                        <li onclick="return searchBar()"><a href="" id="searchbar"><i class="fa-solid fa-magnifying-glass"></i></a></li>
                         <li><a href=""><i class="fa-regular fa-user"></i></a></li>
-                        <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a></li>
+                        <li><a href="" id="shoppingcarticon" onclick="return shoppingCart()"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <div id="sidebar">
-            <ul class="nav-list-responsive">
-                <li><a href="" class="active">HOME</a></li>
-                <li><a href="">ABOUT US</a></li>
-                <li><a href="">SHOP ONLINE</a></li>
-                <li><a href="">HELP</a></li>
-                <li><a href="">LOG IN</a></li>
-            </ul>
+            <div class="left-side-bar slide">
+                <ul class="nav-list-responsive">
+                    <li><a href="" class="active">HOME</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">SHOP ONLINE</a></li>
+                    <li><a href="">HELP</a></li>
+                    <li><a href="">LOG IN</a></li>
+                </ul>
 
-            <ul class="social-responsive">
-                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
-            </ul>
+                <ul class="social-responsive">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cartsidebar">
+            <div class="your-cart">
+                <div class="crossbtn">
+                    <p>Your Cart</p>
+                    <button class="btn closecart"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <p>Free Shipping on orders above 299/-</p>
+                <div class="explore">
+                    <p>Your Cart is Empty</p>
+                    <button class="btn">EXPLORE PRODUCTS</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="searchbar">
+            <form action="">
+                <input type="search" name="" id="">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button id="closesearchbar"><i class="fa-solid fa-xmark"></i></button>
+            </form>
         </div>
 
         <section class="food-varieties">
@@ -90,7 +114,7 @@
         </section>
     </header>
 
-    <section class="slider">
+    <section class="heroimages">
         <a href="">
             <div class="panel active">
                 <img src="https://woktok.com/cdn/shop/files/WokTok_Website_Masthead_Banner_InstantNoodle_35fd9a3a-80b1-49aa-9937-7f2cc0eacde8.jpg?v=1730800177&width=1780" alt="">

@@ -57,14 +57,18 @@ img {
   border: 1px solid black;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   width: 90vw;
   margin: auto;
-  position: relative;
 }
 
 header {
   background-color: black;
+  position: relative;
 }
 header .free-shipping {
   background-color: rgb(233, 25, 25);
@@ -84,18 +88,9 @@ header .navbar {
   padding: 0 20px;
   position: sticky;
   top: 0;
-  bottom: 0;
-}
-@media (max-width: 576px) {
-  header .navbar .nav-logo {
-    left: -10%;
-  }
-  header .navbar .nav-logo img {
-    width: 70% !important;
-  }
 }
 header .navbar .nav-list {
-  flex: 1;
+  flex: 1.2;
 }
 @media (max-width: 990px) {
   header .navbar .nav-list {
@@ -114,16 +109,38 @@ header .navbar .nav-list ul li a {
   color: var(--color-gray);
 }
 header .navbar .nav-logo {
-  flex: 0.9;
+  flex: 2.4;
+  text-align: center;
+  width: fit-content;
   position: relative;
   top: 20px;
+  left: -10px;
+}
+@media (max-width: 576px) {
+  header .navbar .nav-logo {
+    left: 10px;
+  }
+  header .navbar .nav-logo img {
+    width: 80%;
+  }
+}
+@media (max-width: 990px) {
+  header .navbar .nav-logo {
+    left: 20px;
+    flex: 1;
+    width: fit-content;
+  }
 }
 header .navbar .nav-logo img {
   width: 90px;
 }
+header .navbar .login-cart {
+  flex: 1.2;
+}
 header .navbar .login-cart ul {
   display: flex;
   gap: 15px;
+  justify-content: flex-end;
 }
 @media (max-width: 749px) {
   header .navbar .login-cart ul li:nth-child(odd) {
@@ -134,7 +151,7 @@ header .navbar .login-cart ul li a {
   color: var(--color-gray);
 }
 header .navbar .navbar-responsive {
-  flex: 1;
+  flex: 0.7;
 }
 header .navbar .navbar-responsive i {
   font-size: var(--fs-5);
@@ -151,41 +168,161 @@ header .navbar .navbar-responsive i {
   }
 }
 header #sidebar {
-  position: absolute;
-  top: 100px;
-  background-color: var(--color-black);
   width: 100%;
-  z-index: 2;
-  transition: 0.9s all;
+  height: 100%;
   display: none;
-  height: 80%;
+  position: relative;
+}
+header #sidebar .left-side-bar {
+  width: 60%;
+  height: 700px;
+  position: absolute;
+  top: 0;
+  left: -50%;
+  background-color: var(--color-black);
 }
 @media (max-width: 576px) {
-  header #sidebar .nav-list-responsive li {
-    margin: 20px 20px;
-  }
-  header #sidebar .nav-list-responsive li .active {
-    color: var(--color-white);
-    border-bottom: 1px solid white;
-  }
-  header #sidebar .nav-list-responsive li a {
-    font-size: var(--fs-4);
-    color: var(--color-gray);
+  header #sidebar .left-side-bar {
+    width: 100%;
   }
 }
-header #sidebar .social-responsive {
-  display: flex;
-  justify-content: space-around;
-  position: absolute;
-  bottom: 30px;
-  width: 100%;
-}
-header #sidebar .social-responsive li {
+header #sidebar .left-side-bar .nav-list-responsive li {
   margin: 20px 20px;
 }
-header #sidebar .social-responsive li a {
+header #sidebar .left-side-bar .nav-list-responsive li a {
+  font-size: var(--fs-4);
+  color: var(--color-gray);
+}
+header #sidebar .left-side-bar .social-responsive {
+  display: flex;
+  margin-top: 300px;
+  justify-content: space-evenly;
+}
+header #sidebar .left-side-bar .social-responsive li {
+  margin: 20px 20px;
+}
+header #sidebar .left-side-bar .social-responsive li a {
   font-size: var(--fs-6);
   color: var(--color-gray);
+}
+header #sidebar .slide {
+  left: 0;
+}
+header .cartsidebar {
+  display: none;
+}
+header .cartsidebar .your-cart {
+  background-color: var(--color-white);
+  border: 1px solid white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-image: url(https://r2.yourtoken.io/empty_cart_bag-removebg-preview.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  padding-bottom: 200px;
+}
+@media (max-width: 576px) {
+  header .cartsidebar .your-cart {
+    width: 70%;
+  }
+}
+@media (max-width: 990px) {
+  header .cartsidebar .your-cart {
+    width: 60%;
+  }
+}
+@media (min-width: 991px) {
+  header .cartsidebar .your-cart {
+    width: 25%;
+  }
+}
+header .cartsidebar .your-cart .crossbtn {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+  margin: 10px 0;
+}
+header .cartsidebar .your-cart .crossbtn .btn {
+  transition: 0.4s ease;
+}
+header .cartsidebar .your-cart .crossbtn .btn:hover {
+  background-color: transparent;
+  color: red;
+  border-color: red;
+}
+header .cartsidebar .your-cart .crossbtn .btn:active {
+  scale: 1.2;
+}
+header .cartsidebar .your-cart p:nth-child(2) {
+  width: 100%;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 10px;
+}
+header .cartsidebar .your-cart .explore {
+  margin-top: 500px;
+  text-align: center;
+  padding: 10px;
+}
+header .cartsidebar .your-cart .explore .btn {
+  margin: 10px 0;
+}
+header .searchbar {
+  position: absolute;
+  top: 10%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  padding: 30px;
+  text-align: center;
+  display: none;
+}
+@media (max-width: 576px) {
+  header .searchbar form input[type=search] {
+    width: 60% !important;
+    font-size: var(--fs-2) !important;
+  }
+  header .searchbar form button {
+    padding: 10px 5px !important;
+  }
+  header .searchbar form button:nth-child(3) {
+    padding: 0 0 0 20px !important;
+  }
+}
+header .searchbar form {
+  display: flex;
+  justify-content: center;
+}
+header .searchbar form input[type=search] {
+  padding: var(--fs-2);
+  width: 30%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-white);
+  color: var(--color-white);
+  font-size: var(--fs-5);
+  letter-spacing: 1.5px;
+}
+header .searchbar form input[type=search]:focus-visible {
+  outline: none;
+}
+header .searchbar form button {
+  background-color: transparent;
+  padding: 20px;
+  border: none;
+  color: var(--color-white);
+}
+header .searchbar form button:nth-child(2) {
+  font-size: var(--fs-3);
+  border-bottom: 1px solid var(--color-white);
+}
+header .searchbar form button:nth-child(3) {
+  font-size: var(--fs-6);
+  padding: 0 0 0 60px;
 }
 header .food-varieties {
   padding: 20px 0;
@@ -210,6 +347,19 @@ header .food-varieties {
     max-width: 60px !important;
   }
 }
+@media (max-width: 350px) {
+  header .food-varieties {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  header .food-varieties div {
+    border: 1px solid black;
+    margin-top: 20px;
+  }
+  header .food-varieties div a img {
+    max-width: 60px !important;
+  }
+}
 header .food-varieties div {
   display: grid;
   place-items: center;
@@ -223,26 +373,21 @@ header .food-varieties div p {
   font-size: var(--fs-1);
   line-height: 1.5;
   letter-spacing: 1px;
-  width: -moz-fit-content;
   width: fit-content;
 }
 
-.slider {
-  display: flex;
-  flex-direction: column;
-}
-.slider a {
+.heroimages a {
   width: 100%;
 }
-.slider a .panel {
+.heroimages a .panel {
   opacity: 0;
   transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.slider a .panel img {
+.heroimages a .panel img {
   width: 100%;
   z-index: 1;
 }
-.slider a .active {
+.heroimages a .active {
   opacity: 4;
 }
 
@@ -305,6 +450,12 @@ header .food-varieties div p {
   text-align: center;
   line-height: 1.2;
 }
+@media (max-width: 350px) {
+  .hot-seller .container h1 {
+    font-size: 40px !important;
+    margin-bottom: 10px;
+  }
+}
 .hot-seller .container h1 {
   font-size: 60px;
   font-family: cursive;
@@ -351,4 +502,6 @@ header .food-varieties div p {
 .hot-seller .container .selling-card-grid .selling-card p:nth-child(4) {
   font-size: var(--fs-5);
   color: rgb(28, 50, 176);
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
