@@ -16,3 +16,25 @@ setInterval(()=>{
     }
 
 },2500)
+
+
+// sidebar
+// ==========================================================
+let sidebar = document.getElementsByClassName("navbar-responsive")[0].lastElementChild
+sidebar.addEventListener("click",()=>{
+    if (sidebar.className == "fa-solid fa-bars"){
+        document.getElementById("sidebar").style.display = "block";
+        sidebar.className = "fa-solid fa-xmark";
+    } else {
+        document.getElementById("sidebar").style.display = "none";
+        sidebar.className = "fa-solid fa-bars";
+
+    }
+})
+
+
+// ============================================================================================
+// animation
+
+let animation = Array.from(document.getElementsByClassName("animation"))
+console.log(animation)

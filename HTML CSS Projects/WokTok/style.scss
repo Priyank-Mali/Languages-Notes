@@ -4,6 +4,7 @@
     box-sizing: border-box;
 
     font-family: sans-serif;
+    
 }
 
 ul{
@@ -19,10 +20,51 @@ img{
 :root{
     --color-black : black;
     --color-white : white;
+    --color-gray : rgb(184, 175, 175);
 
     --fs-1 : 14px;
     --fs-2 : 16px;
     --fs-3 : 18px;
+    --fs-4 : 20px;
+    --fs-5 : 22px;
+    --fs-6 : 24px;
+}
+
+@keyframes tranimation {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(10deg) scale(1.2);
+
+    }
+    75%{
+        transform: rotate(-10deg) scale(1.2);
+
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.btn{
+    background-color: var(--color-black);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &:hover{
+        background-color: greenyellow;
+        color: var(--color-black);
+        border: 1px solid black;
+    }
+}
+
+.container{
+    width: 90vw;
+    margin: auto;
+    position: relative;
 }
 
 header{
@@ -42,78 +84,137 @@ header{
     }
 
      // ====================================================================
-    // navbar
+    // navbar  
 
-    .container{
-        width: 90vw;
-        margin: auto;
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        position: sticky;
+        top: 0;
+        bottom: 0;
+        @media (max-width:576px) {
+            .nav-logo{
+                // flex: 0.3;
+                left: -10%;
+                img{
+                    width: 70% !important;
+                }
+            }
+        }
 
-            .navbar{
+        .nav-list {
+            flex: 1;
+
+            @media (max-width:990px) {
+                display: none;
+            }
+            ul{
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 0 20px;
+                gap: 20px;
 
-                .nav-list {
-                    flex: 1;
-
-                    @media (max-width:990px) {
-                        display: none;
-                    }
-                    ul{
-                        display: flex;
-                        gap: 20px;
-
-                        li{
-                            a{
-                                color: var(--color-white);
-                            }
-                        }
-                    }
-                }
-
-                .nav-logo{
-                    flex: 0.9;
-                    img{
-                        height: 100px;
-                    }
-                }
-
-                .login-cart{
-                    ul{
-                        display: flex;
-                        gap: 15px;
-
-                        li{
-                            &:nth-child(odd){
-                                @media (max-width:749px) {
-                                    display: none;
-                                }
-                                
-                            }
-                            a{
-                                color: var(--color-white);
-                            }
-                        }
-                    }
-                    
-                }
-
-                .navbar-responsive{
-                    flex: 1;
-                    i{
+                li{
+                    .active{
                         color: var(--color-white);
+                        border-bottom: 1px solid white;
                     }
-                    @media (min-width:990px) {
-                        display: none;
+                    a{
+                        color: var(--color-gray);
+                    }       
+                }
+            }
+        }
+
+        .nav-logo{
+            flex: 0.9;
+            position: relative;
+            top: 20px;
+            img{
+                width: 90px;
+            }
+        }
+
+        .login-cart{
+            ul{
+                display: flex;
+                gap: 15px;
+
+                li{
+                    &:nth-child(odd){
+                        @media (max-width:749px) {
+                            display: none;
+                        }
+                        
                     }
-                    @media (max-width:990px) {
-                        display: block;
+                    a{
+                        color: var(--color-gray);
                     }
                 }
             }
-    }
+            
+        }
 
+        .navbar-responsive{
+            flex: 1;
+            i{
+                font-size: var(--fs-5);
+                color: var(--color-white);
+            }
+            @media (min-width:990px) {
+                display: none;
+            }
+            @media (max-width:990px) {
+                display: block;
+
+
+            }
+        }
+    }
+   
+
+    #sidebar{
+        position: absolute;
+        top: 100px;
+        background-color: var(--color-black);
+        width: 100%;
+        z-index: 2;
+        transition: 0.9s all;
+        display: none;
+        height: 80%;
+
+
+        .nav-list-responsive{
+            @media (max-width:576px) {
+                li{
+                    margin: 20px 20px;
+                    .active{
+                        color: var(--color-white);
+                        border-bottom: 1px solid white;
+                    }
+                    a{
+                        font-size: var(--fs-4);
+                        color: var(--color-gray);
+                    }       
+                }
+                
+                }
+        }
+        .social-responsive{
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            li{
+                margin: 20px 20px;
+                a{
+                    font-size: var(--fs-6);
+                    color: var(--color-gray);
+                }
+            }
+        }
+    }
 
     .food-varieties{
         padding: 20px 0;
@@ -122,14 +223,32 @@ header{
         border-top: 1px solid rgba(255, 255, 255, 0.417);
         color: var(--color-white);
         text-align: center;
+        margin: 0 10px;
+        gap: 30px;
+
+        @media (max-width:576px) {
+            justify-content: space-evenly !important;
+            align-items: center;
+            gap: 20px !important;
+
+            div{
+                margin-top: 20px;
+                a{
+                    img{
+                        max-width: 60px !important;
+                    }
+                }
+            }
+        }
 
         div{
             display: grid;
             place-items: center;
+            margin-top: 20px;
 
             a{
                 img{
-                    max-width: 35%;
+                    width: 70px;
                 }
             }
             
@@ -152,16 +271,137 @@ header{
 
     a{
         width: 100%;
-        position: absolute;
+        // position: absolute;
         .panel{
             opacity: 0;
             transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
             img{
                 width: 100%;
+                z-index: 1;
             }
         }
         .active{
             opacity: 4;
+        }
+    }
+}
+
+//===================================================================================
+//main
+
+.main{
+    height: 100%;
+    .container{
+        text-align: center;
+        .wokn-tok{
+            h1{
+                color: red;
+                font-family: "Bebas Neue", sans-serif;
+                font-size: 70px;
+            }
+            p{
+                font-size: var(--fs-4);
+            }
+        }
+
+        .item-card-grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            align-items: center;
+            @media (max-width:576px) {
+                grid-template-columns: 1fr;
+            }
+            .item-card{
+                margin: auto;
+                width: 100%;
+                padding: 10px;
+
+                .item-card-image{
+                    background-color: rgb(238, 182, 14);
+                    border-radius: 20px;
+                    img{
+                        width: 280px;
+                        border-radius: 20px;      
+                        transition: 0.2s ease-in;
+                        &:hover{
+                            scale: 1.3;
+                        }          
+                    }
+                }
+                
+                p{
+                    margin: 10px;
+                }
+                p:nth-child(2){
+                    font-weight: 700;
+                }
+                p:nth-child(3){
+                    font-weight: 100;
+                    color: rgb(146, 146, 146);
+                }
+            }
+        }
+    }
+}
+
+
+// ====================================================================
+// hot seller
+
+.hot-seller{
+    .container{
+        background-color: rgb(228, 215, 30);
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        line-height: 1.2;
+        h1{
+            font-size: 60px;
+            font-family: cursive;
+            color: var(--color-white);
+            -webkit-text-stroke: rgb(233, 129, 43);
+            -webkit-text-stroke-width: 1.5px;
+        }
+        p{
+            font-size: var(--fs-4);
+            font-weight: 600;
+        }
+        .selling-card-grid{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+
+            @media (max-width:576px) {
+                grid-template-columns: 1fr;
+            }
+            .selling-card{
+                padding: 10px;
+                position: relative;
+                div{
+                    
+                    width: 55px;
+                    height: 55px;
+                    position: absolute;
+                    top: 20px;
+                    right: 40px;
+                    animation-name: tranimation;
+                    animation-duration: 2s;
+                    animation-timing-function: ease;
+                    animation-iteration-count: infinite;
+                    display: grid;
+                    place-content: center;
+                    font-size: 10px;
+
+                }
+                p{
+                    font-size: 11px;
+                    margin: 10px 0;
+                    &:nth-child(4){
+                        font-size: var(--fs-5);
+                        color: rgb(28, 50, 176);    
+                    }
+                }
+            }
         }
     }
 }

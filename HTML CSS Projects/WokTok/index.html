@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WokTok</title>
+    <title>Wok Tok by veeba</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Hanalei+Fill&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bokor&family=Pacifico&family=SUSE:wght@200&family=Spicy+Rice&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     
@@ -19,7 +20,7 @@
             <div class="navbar">
                 <div class="nav-list">
                     <ul>
-                        <li><a href="">HOME</a></li>
+                        <li><a href="" class="active">HOME</a></li>
                         <li><a href="">ABOUT US</a></li>
                         <li><a href="">SHOP ONLINE</a></li>
                     </ul>
@@ -43,6 +44,23 @@
                 </div>
             </div>
         </section>
+
+        <div id="sidebar">
+            <ul class="nav-list-responsive">
+                <li><a href="" class="active">HOME</a></li>
+                <li><a href="">ABOUT US</a></li>
+                <li><a href="">SHOP ONLINE</a></li>
+                <li><a href="">HELP</a></li>
+                <li><a href="">LOG IN</a></li>
+            </ul>
+
+            <ul class="social-responsive">
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href=""><i class="fa-brands fa-x-twitter"></i></a></li>
+            </ul>
+        </div>
 
         <section class="food-varieties">
             <div>
@@ -78,7 +96,7 @@
                 <img src="https://woktok.com/cdn/shop/files/WokTok_Website_Masthead_Banner_InstantNoodle_35fd9a3a-80b1-49aa-9937-7f2cc0eacde8.jpg?v=1730800177&width=1780" alt="">
             </div>
         </a>
-        <a href="">
+        <!-- <a href="">
             <div  class="panel">
                 <img src="https://woktok.com/cdn/shop/files/Woktok_Website_Masterhead_Banner_PopularChinese_c7b4a58b-991c-46e6-a359-a6de1f53904a.jpg?v=1730800241&width=1780" alt="">
             </div>
@@ -92,13 +110,97 @@
             <div class="panel">
                 <img src="https://woktok.com/cdn/shop/files/WokTok_Website_Masthead_Banner_PanAsian_179455e2-5661-4c0a-9f85-7d103e049149.jpg?v=1730800223&width=1780" alt="">
             </div>
-        </a>
+        </a> -->
     </section>
     
-
+    
     <div class="main">
+        <div class="container">
+            <div class="wokn-tok">
+                <h1>wok 'n' tok</h1>
+                <p>Asian Cooking Essentials. Slurpy Instant Noodles. Signature Sauces.</p>
+            </div>
 
+            <div class="item-card-grid">
+                <div class="item-card">
+                    <div class="item-card-image">
+                        <img src="https://woktok.com/cdn/shop/files/1-04.png?v=1727183622&width=352" alt="">
+                    </div>
+                    <p>INSTANT NOODLES</p>
+                    <p>Slurpy, saucy, and full of taste. Quick to make, hard to resist-these noodles satisfy your cravings and keep you coming back for more!</p>
+                    <button class="btn">SHOP NOW</button>
+                </div>
+                <div class="item-card">
+                    <div class="item-card-image">
+                        <img src="https://woktok.com/cdn/shop/files/Schezwan_Chilli_Chutney_196d99a7-cdf8-413b-aecb-c038374eb6be.png?v=1727183410&width=352" alt="">
+                    </div> 
+                    <p>POPULAR CHINESE</p>
+                    <p>Bold, spicy, and full of punch. These are the flavors that make your stir-fries sizzle and your noodles sing – bringing the spirit of Indian Chinese to your kitchen!</p>
+                    <button class="btn">SHOP NOW</button>
+                </div>
+                <div class="item-card">
+                    <div class="item-card-image">
+                        <img src="https://woktok.com/cdn/shop/files/Roasted_Sesame.png?v=1727182919&width=352" alt="">
+                    </div>
+                    <p>PAN ASIAN</p>
+                    <p>Smooth, tasty, and full of life. These flavors take your meals on a bold journey across Asia, turning everyday dishes into something unforgettable!</p>
+                    <button class="btn">SHOP NOW</button>
+                </div>
+                <div class="item-card">
+                    <div class="item-card-image">
+                        <img src="https://woktok.com/cdn/shop/files/Woktok_Amazon_Combo_Listing_Banner_final-06_1.png?v=1729294724&width=352" alt="">
+                    </div> 
+                    <p>OFFERS & COMBOS</p>
+                    <p>Exciting bundles and limited-time promotions. Save on your favourites and enjoy incredible deals!</p>
+                    <button class="btn">SHOP NOW</button>
+                </div>
+            </div>
+            
+        </div>
     </div>
+
+    <section class="hot-seller">
+        <div class="container">
+            <h1>HOT SELLERS</h1>
+            <p>They are called hot sellers for a reason.</p>
+
+            <div class="selling-card-grid">
+                <div class="selling-card">
+                    <img src="https://woktok.com/cdn/shop/files/All_in_one_Chowmein_Sauce_0cb8729c-2ca4-40c4-a585-a2dc8899010e.png?v=1727182306&width=352" alt="">
+                    <h3>All-in-One Chowmein Sauce (235 G)</h3>
+                    <p>Everything you need for perfect chowmein in one sauce – balanced, easy, and just the way you love it.</p>
+                    <p>&#8377; <i>149.00</i></p>
+                    <button class="btn">ADD TO CART</button>
+                    <div class="animation">
+                        <img src="https://woktok.com/cdn/shop/files/tag-new.png?v=1726103295&width=120" alt="">
+                    </div>
+
+                </div>
+                <div class="selling-card">
+                    <img src="https://woktok.com/cdn/shop/files/Schezwan_Chilli_Chutney.png?v=1727182989&width=352" alt="">
+                    <h3>Schezwan Chilli Chutney (250 G)</h3>
+                    <p>A burst of spice and depth – perfect for dipping, spreading, or stirring into your favorite dishes.</p>
+                    <p>&#8377; <i>90.00</i></p>
+                    <button class="btn">ADD TO CART</button>
+                    <div class="animation">
+                        <img src="https://woktok.com/cdn/shop/files/tag-trending.png?v=1726103295&width=120" alt="">
+                    </div>
+                </div>
+                <div class="selling-card">
+                    <img src="https://woktok.com/cdn/shop/files/Tokyo_Teriyaki.png?v=1727183215&width=352" alt="">
+                    <h3>Tokyo-Style Teriyaki Sauce (250 G)</h3>
+                    <p>Sweet and savory – your go-to for adding a flavorful, finishing touch.</p>
+                    <p>&#8377; <i>169.00</i></p>
+                    <button class="btn">ADD TO CART</button>
+                    <div class="animation">
+                        <img src="https://woktok.com/cdn/shop/files/tag-new.png?v=1726103295&width=120" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
     
 
     <script src="script.js"></script>
