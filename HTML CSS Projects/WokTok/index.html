@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bokor&family=Pacifico&family=SUSE:wght@200&family=Spicy+Rice&display=swap" rel="stylesheet">
+
+     <!-- bx slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
     
 </head>
 <body>
@@ -18,29 +23,31 @@
         
         <section class="container">
             <div class="navbar">
-                <div class="nav-list">
-                    <ul>
-                        <li><a href="" class="active">HOME</a></li>
-                        <li><a href="">ABOUT US</a></li>
-                        <li><a href="">SHOP ONLINE</a></li>
-                    </ul>
-                </div>
+                <div class="navbar-sticky">
+                    <div class="nav-list">
+                        <ul>
+                            <li><a href="" class="active">HOME</a></li>
+                            <li><a href="">ABOUT US</a></li>
+                            <li><a href="">SHOP ONLINE</a></li>
+                        </ul>
+                    </div>
 
-                <div class="navbar-responsive">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                
-                <div class="nav-logo">
-                    <img src="https://woktok.com/cdn/shop/files/woktok-logo.svg?v=1719916877&width=135" alt="">
-                </div>
-                
-                <div class="login-cart">
+                    <div class="navbar-responsive">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    
+                    <div class="nav-logo">
+                        <img src="https://woktok.com/cdn/shop/files/woktok-logo.svg?v=1719916877&width=135" alt="">
+                    </div>
+                    
+                    <div class="login-cart">
                     <ul>
                         <li><a href="">HELP</a></li>
                         <li onclick="return searchBar()"><a href="" id="searchbar"><i class="fa-solid fa-magnifying-glass"></i></a></li>
                         <li><a href=""><i class="fa-regular fa-user"></i></a></li>
                         <li><a href="" id="shoppingcarticon" onclick="return shoppingCart()"><i class="fa-solid fa-cart-shopping"></i></a></li>
                     </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -227,6 +234,59 @@
     </section>
     
 
+    <!-- spotlight -->
+    <div class="container">
+        <section class="spotlight">
+            <div class="spotlight-text">
+                <h1>spotlight</h1>
+                <p>The Wok Stars Sizzling up the heat.</p>
+            </div>
+            <div class="spotlight-animation">
+                <div class="bxslider slider1">
+                    <div class="box">
+                        <img src="https://woktok.com/cdn/shop/files/2023-08-12_12-08-38_B_R12_S5_copy.jpg?v=1727438850&width=600" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="https://woktok.com/cdn/shop/files/VEEBA_AUGUST_35681_copy.jpg?v=1727438850&width=352" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="https://woktok.com/cdn/shop/files/2023-08-07_19-57-56_B_R12_S5_copy.jpg?v=1727438850&width=352" alt="">
+                    </div>
+                    <div class="box">
+                        <img src=https://woktok.com/cdn/shop/files/harpal3453_A_pot_of_steaming_hot_food_is_being_poured_into_the__88fc12dc-8d31-4024-aebd-271635479a9c.png?v=1727436176&width=352" alt="">
+                    </div>
+                    <div class="box">
+                        <img src=https://woktok.com/cdn/shop/files/harpal3453_Close-up_of_a_figure_being_sizzled_in_flames_on_the__7f37a559-7d2b-4cd4-a28d-a95045a45c28.png?v=1727436175&width=352" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="spotlight-animation">
+                <div class="bxslider slider2">
+                    <div class="box">
+                        <img src="https://woktok.com/cdn/shop/files/2023-08-12_11-24-06_B_R12_S5_copy.jpg?v=1727438850&width=352" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="https://woktok.com/cdn/shop/files/harpal3453_beautiful_shoot_of_Veg_Spring_Roll_with_Soya_Drizzle_cc915b87-47e3-4b16-b787-22f3a6d623be.png?v=1727436172&width=352" alt="">
+                    </div>
+                    <div class="box">
+                        <img src="https://woktok.com/cdn/shop/files/harpal3453_front_view_of_Indian_style_noodles_bowl_with_chopsti_db0d4b4d-1b9c-46e3-86f3-a332d2f4f16b.png?v=1727436173&width=352" alt="">
+                    </div>
+                    <div class="box">
+                        <img src=https://woktok.com/cdn/shop/files/harpal3453_A_black_wok_is_cooking_food_on_the_stove_with_flames_3b725018-1130-4c8b-bc84-3b01438d5ca6.png?v=1727436172&width=352" alt="">
+                    </div>
+                    <div class="box">
+                        <img src=https://woktok.com/cdn/shop/files/VEEBA_AUGUST_35697_copy.jpg?v=1727438850&width=352" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+     <script>
+        $(document).ready(function(){
+            $(".slider").bxSlider();
+        });
+     </script>
     <script src="script.js"></script>
 </body>
 </html>
