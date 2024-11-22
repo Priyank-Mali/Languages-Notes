@@ -105,7 +105,8 @@
         HTTP method + address --> Rest APIs
 
     Idempotent :
-        An HTTP method is considered idempotent if making multiple identical requests has the same effect as making a single request. In other words, no matter how many times you repeat the same request, the result will always be the same. (safe)
+        An HTTP method is considered idempotent if making multiple identical requests has the same effect as making a single request. 
+        In other words, no matter how many times you repeat the same request, the result will always be the same. (safe)
 
         GET / PUT / DELETE
     
